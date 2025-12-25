@@ -1,10 +1,10 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <title>Bhumi Marketing – Digital Marketing & CRM Solutions</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bhumi Marketing provides Digital Marketing, CRM, WhatsApp API & Lead Generation services.">
+<meta name="description" content="Bhumi Marketing provides Digital Marketing, CRM, WhatsApp API, IVR & RCS services.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -105,6 +105,29 @@ footer{
     font-size:14px;
 }
 
+/* WhatsApp Floating Button */
+.whatsapp-float{
+    position:fixed;
+    width:55px;
+    height:55px;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    text-align:center;
+    font-size:28px;
+    box-shadow:2px 2px 10px rgba(0,0,0,0.3);
+    z-index:1000;
+}
+.whatsapp-float span{
+    display:block;
+    margin-top:12px;
+}
+.whatsapp-float:hover{
+    background:#1ebe5d;
+}
+
 @media(max-width:600px){
     header h1{font-size:22px}
     .hero h2{font-size:30px}
@@ -132,37 +155,54 @@ footer{
 <h2>Grow Your Business With Bhumi Marketing</h2>
 <p>
 We provide complete Digital Marketing, CRM Solutions, WhatsApp API Integration, 
-and Lead Generation services to help your business grow faster and smarter.
+IVR, RCS Messaging and Lead Generation services to help your business grow faster.
 </p>
 </section>
 
 <section class="section" id="features">
 <h2>Our Features</h2>
 <div class="features">
+
 <div class="feature-box">
 <h3>Digital Marketing</h3>
 <p>Result-oriented marketing strategies to increase brand visibility.</p>
 </div>
+
 <div class="feature-box">
 <h3>WhatsApp API</h3>
 <p>Automated WhatsApp messaging for business communication.</p>
 </div>
+
 <div class="feature-box">
 <h3>CRM Solutions</h3>
 <p>Manage leads, customers, and sales in one system.</p>
 </div>
+
 <div class="feature-box">
 <h3>Lead Generation</h3>
 <p>High-quality leads for better conversion and growth.</p>
 </div>
+
 <div class="feature-box">
 <h3>Business Automation</h3>
 <p>Save time with automated workflows and tools.</p>
 </div>
+
 <div class="feature-box">
 <h3>24×7 Support</h3>
 <p>Reliable customer support whenever you need.</p>
 </div>
+
+<div class="feature-box">
+<h3>IVR Solutions</h3>
+<p>Smart IVR calling system for automated customer support.</p>
+</div>
+
+<div class="feature-box">
+<h3>RCS Messaging</h3>
+<p>Rich messages with images, buttons and verified branding.</p>
+</div>
+
 </div>
 </section>
 
@@ -170,10 +210,9 @@ and Lead Generation services to help your business grow faster and smarter.
 <h2>About Us</h2>
 <div class="about">
 <p>
-About Us
-Bhumi Marketing is a trusted digital marketing and automation service provider based in India. We help businesses, startups, and NGOs to build their online presence and increase customer engagement.
-Our services include digital marketing, lead generation, CRM setup, WhatsApp API integration, and automation solutions. We believe in affordable pricing, honest communication, and delivering real results.
-Our mission is to support growing organizations with modern digital tools and reliable marketing strategies.
+Bhumi Marketing is a trusted digital marketing and automation service provider in India.
+We help businesses, startups, and NGOs to grow with Digital Marketing, CRM, WhatsApp API,
+IVR calling, RCS messaging and automation solutions.
 </p>
 </div>
 </section>
@@ -190,24 +229,8 @@ Our mission is to support growing organizations with modern digital tools and re
 <h2>Privacy Policy</h2>
 <div class="policy">
 <p>
-Privacy Policy – Bhumi Marketing
-Bhumi Marketing respects your privacy and is committed to protecting the personal information you share with us.
-Information We Collect
-We may collect your name, mobile number, email address, and business details when you contact us or use our services.
-How We Use Information
-To provide digital marketing and automation services
-To contact you regarding inquiries, support, or updates
-To improve our services and customer experience
-Data Protection
-We do not sell, rent, or share your personal information with third parties except where required by law.
-Cookies
-Our website may use cookies to enhance user experience and analyze website traffic.
-Consent
-By using our website, you consent to our Privacy Policy.
-Contact
-If you have any questions about this Privacy Policy, please contact us at:
-Email: bhumimarketing.info.gov@gmail.com
-Mobile: 9887700059
+Bhumi Marketing respects your privacy. We collect only necessary information
+to provide services and never sell your data.
 </p>
 </div>
 </section>
@@ -216,24 +239,8 @@ Mobile: 9887700059
 <h2>Terms & Conditions</h2>
 <div class="policy">
 <p>
-Terms & Conditions – Bhumi Marketing
-By accessing and using the Bhumi Marketing website, you agree to the following terms and conditions.
-Services
-Bhumi Marketing provides digital marketing, CRM, automation, and WhatsApp API related services. Service details and pricing may change without prior notice.
-Payments
-All payments made for services are non-refundable unless explicitly mentioned in a written agreement.
-User Responsibility
-You agree not to misuse our services or website for any illegal or unauthorized purpose.
-Intellectual Property
-All website content, logos, and designs are the property of Bhumi Marketing and may not be copied without permission.
-Limitation of Liability
-Bhumi Marketing will not be liable for any direct or indirect damages arising from the use of our services or website.
-Changes
-We reserve the right to update these terms at any time without prior notice.
-Contact
-For any questions regarding these terms, contact us at:
-Email: bhumimarketing.info.gov@gmail.com
-Mobile: 9887700059
+All services are subject to written agreement. Payments are non-refundable
+unless stated otherwise.
 </p>
 </div>
 </section>
@@ -242,8 +249,10 @@ Mobile: 9887700059
 © 2025 Bhumi Marketing | All Rights Reserved
 </footer>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919887700059" class="whatsapp-float" target="_blank">
+<span>💬</span>
+</a>
+
 </body>
 </html>
-
-
-
