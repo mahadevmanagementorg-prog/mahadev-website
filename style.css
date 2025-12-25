@@ -1,0 +1,75 @@
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f5f7fa;
+}
+
+header{
+  background:#0d47a1;
+  padding:10px 0;
+}
+
+.container{
+  width:90%;
+  margin:auto;
+}
+
+.header-flex{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  height:50px;
+}
+
+nav a{
+  color:#fff;
+  margin:0 10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.hero{
+  background:linear-gradient(to right,#1976d2,#0d47a1);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.services{
+  list-style:none;
+  padding:0;
+}
+
+.services li{
+  background:#fff;
+  margin:8px 0;
+  padding:10px;
+  border-left:4px solid #1976d2;
+}
+
+.contact{
+  background:#1976d2;
+  color:#fff;
+  padding:30px;
+  text-align:center;
+}
+
+/* WhatsApp Button */
+.whatsapp-float{
+  position:fixed;
+  width:55px;
+  height:55px;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  text-align:center;
+  font-size:28px;
+  line-height:55px;
+  text-decoration:none;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3);
+}
