@@ -1,12 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mahadev Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahadev Services</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+}
+header{
+    background:#0d47a1;
+    color:#fff;
+    padding:20px;
+}
+header h1{
+    margin:0;
+}
+nav{
+    margin-top:10px;
+}
+nav a{
+    color:#fff;
+    margin-right:15px;
+    text-decoration:none;
+    font-weight:bold;
+}
+.hero{
+    background:linear-gradient(to right,#1976d2,#0d47a1);
+    color:#fff;
+    padding:60px 20px;
+    text-align:center;
+}
+.hero h2{
+    font-size:36px;
+    margin-bottom:10px;
+}
+.section{
+    padding:40px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+.card h3{
+    margin-top:0;
+    color:#0d47a1;
+}
+.contact{
+    background:#e3f2fd;
+    padding:40px 20px;
+}
+footer{
+    background:#0d47a1;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+}
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:#fff;
+    padding:12px 18px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
 </head>
+
 <body>
-  <h1>Welcome to Mahadev Services</h1>
-  <p>This website is live on my own domain.</p>
+
+<header>
+    <h1>Mahadev Services</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h2>Professional Digital & Business Services</h2>
+    <p>CRM • WhatsApp API • Website • Digital Marketing</p>
+</section>
+
+<section class="section" id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>CRM Solutions</h3>
+            <p>Custom CRM systems for business automation and growth.</p>
+        </div>
+        <div class="card">
+            <h3>WhatsApp API</h3>
+            <p>Official WhatsApp Business API integration.</p>
+        </div>
+        <div class="card">
+            <h3>Website Development</h3>
+            <p>Fast, secure and mobile-friendly websites.</p>
+        </div>
+        <div class="card">
+            <h3>Digital Marketing</h3>
+            <p>SEO, Ads, Lead generation & brand growth.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>About Us</h2>
+    <p>
+        Mahadev Services provides reliable digital solutions for businesses.
+        Our goal is to help you grow using modern technology and automation.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> 9251120059</p>
+    <p><strong>Email:</strong> mahadevservices@gmail.com</p>
+    <p><strong>Location:</strong> India</p>
+</section>
+
+<footer>
+    © 2025 Mahadev Services. All Rights Reserved.
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919251120059" target="_blank">
+    WhatsApp
+</a>
+
 </body>
 </html>
