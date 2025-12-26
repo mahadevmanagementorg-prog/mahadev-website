@@ -1,32 +1,171 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Features | Bhumi Marketing</title>
-<link rel="icon" href="favicon.png">
+<meta charset="UTF-8">
+<title>Our Features | Bhumi Marketing</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-body{margin:0;font-family:Arial;background:#f4f6f9}
-header,footer{background:#0d47a1;color:#fff;padding:15px}
-.section{max-width:1200px;margin:auto;padding:40px;background:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f9fc;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:#ffffff;
+    border-bottom:1px solid #e6e9ef;
+}
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.logo-area img{
+    height:40px;
+}
+.logo-area span{
+    font-size:22px;
+    font-weight:700;
+    color:#0d47a1;
+}
+nav a{
+    margin-left:18px;
+    text-decoration:none;
+    font-weight:600;
+    color:#333;
+}
+nav a:hover{
+    color:#0d47a1;
+}
+
+/* FEATURES SECTION */
+.features-section{
+    padding:90px 20px;
+    text-align:center;
+}
+.features-title{
+    font-size:36px;
+    font-weight:700;
+    color:#0d47a1;
+    margin-bottom:60px;
+}
+
+.features-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:30px;
+}
+
+.feature-card{
+    background:#fff;
+    padding:40px 25px;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:all 0.3s ease;
+}
+.feature-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+.feature-card h3{
+    font-size:22px;
+    font-weight:600;
+    color:#1a73e8;
+    margin-bottom:12px;
+}
+
+.feature-card p{
+    font-size:16px;
+    color:#333;
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+    margin-top:80px;
+    font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    .features-title{font-size:30px}
+    nav{display:none}
+}
 </style>
 </head>
+
 <body>
 
+<!-- HEADER -->
 <header>
-<a href="index.html" style="color:#fff;text-decoration:none;">← Home</a>
+  <div class="header-inner">
+    <div class="logo-area">
+      <img src="logo.png" alt="Bhumi Marketing Logo">
+      <span>Bhumi Marketing</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="section">
-<h2>Our Services</h2>
-<ul>
-<li>Digital Marketing</li>
-<li>WhatsApp API</li>
-<li>CRM Solutions</li>
-<li>Lead Generation</li>
-<li>IVR & RCS Messaging</li>
-</ul>
-</div>
+<!-- FEATURES -->
+<section class="features-section">
+  <h2 class="features-title">Our Features</h2>
 
-<footer>© 2025 Bhumi Marketing</footer>
+  <div class="features-grid">
+
+    <div class="feature-card">
+      <h3>Digital Marketing</h3>
+      <p>Increase brand visibility</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>WhatsApp API</h3>
+      <p>Automated messaging</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>CRM Solutions</h3>
+      <p>Lead & customer management</p>
+    </div>
+
+    <div class="feature-card">
+      <h3>Lead Generation</h3>
+      <p>High quality leads</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2025 Bhumi Marketing | All Rights Reserved
+</footer>
+
 </body>
 </html>
