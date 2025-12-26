@@ -9,7 +9,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     background:#f4f6f9;
     color:#333;
     line-height:1.6;
@@ -80,21 +80,77 @@ nav a:hover{text-decoration:underline}
     color:#1976d2;
 }
 
-.about, .policy{
+.about,.policy{
     background:#fff;
     padding:30px;
     border-radius:8px;
     box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
+/* CONTACT */
 .contact-box{
     background:#0d47a1;
     color:#fff;
     padding:35px;
     border-radius:8px;
     text-align:center;
+    margin-bottom:30px;
 }
 .contact-box p{font-size:18px;margin:10px 0}
+
+/* CONTACT FORM */
+.contact-form{
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    max-width:600px;
+    margin:auto;
+}
+.contact-form label{
+    font-weight:600;
+    margin-bottom:6px;
+    display:block;
+}
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:14px;
+    border-radius:30px;
+    border:1px solid #ddd;
+    background:#f9f9f9;
+    margin-bottom:18px;
+}
+.contact-form textarea{
+    border-radius:12px;
+    height:120px;
+    resize:none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#1976d2;
+    background:#fff;
+}
+.form-checkbox{
+    display:flex;
+    gap:10px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+.form-checkbox input{margin-top:4px}
+.form-btn{
+    width:100%;
+    background:#222;
+    color:#fff;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.form-btn:hover{background:#000}
 
 footer{
     background:#222;
@@ -102,10 +158,9 @@ footer{
     text-align:center;
     padding:15px;
     margin-top:40px;
-    font-size:14px;
 }
 
-/* WhatsApp Floating Button */
+/* WhatsApp Button */
 .whatsapp-float{
     position:fixed;
     width:55px;
@@ -118,15 +173,9 @@ footer{
     text-align:center;
     font-size:28px;
     box-shadow:2px 2px 10px rgba(0,0,0,0.3);
-    z-index:1000;
 }
-.whatsapp-float span{
-    display:block;
-    margin-top:12px;
-}
-.whatsapp-float:hover{
-    background:#1ebe5d;
-}
+.whatsapp-float span{display:block;margin-top:12px}
+.whatsapp-float:hover{background:#1ebe5d}
 
 @media(max-width:600px){
     header h1{font-size:22px}
@@ -154,55 +203,17 @@ footer{
 <section class="hero" id="home">
 <h2>Grow Your Business With Bhumi Marketing</h2>
 <p>
-We provide complete Digital Marketing, CRM Solutions, WhatsApp API Integration, 
-IVR, RCS Messaging and Lead Generation services to help your business grow faster.
+Digital Marketing, CRM, WhatsApp API, IVR & RCS solutions to grow your business faster.
 </p>
 </section>
 
 <section class="section" id="features">
 <h2>Our Features</h2>
 <div class="features">
-
-<div class="feature-box">
-<h3>Digital Marketing</h3>
-<p>Result-oriented marketing strategies to increase brand visibility.</p>
-</div>
-
-<div class="feature-box">
-<h3>WhatsApp API</h3>
-<p>Automated WhatsApp messaging for business communication.</p>
-</div>
-
-<div class="feature-box">
-<h3>CRM Solutions</h3>
-<p>Manage leads, customers, and sales in one system.</p>
-</div>
-
-<div class="feature-box">
-<h3>Lead Generation</h3>
-<p>High-quality leads for better conversion and growth.</p>
-</div>
-
-<div class="feature-box">
-<h3>Business Automation</h3>
-<p>Save time with automated workflows and tools.</p>
-</div>
-
-<div class="feature-box">
-<h3>24×7 Support</h3>
-<p>Reliable customer support whenever you need.</p>
-</div>
-
-<div class="feature-box">
-<h3>IVR Solutions</h3>
-<p>Smart IVR calling system for automated customer support.</p>
-</div>
-
-<div class="feature-box">
-<h3>RCS Messaging</h3>
-<p>Rich messages with images, buttons and verified branding.</p>
-</div>
-
+<div class="feature-box"><h3>Digital Marketing</h3><p>Grow brand visibility</p></div>
+<div class="feature-box"><h3>WhatsApp API</h3><p>Automated messaging</p></div>
+<div class="feature-box"><h3>CRM Solutions</h3><p>Lead & customer management</p></div>
+<div class="feature-box"><h3>Lead Generation</h3><p>High quality leads</p></div>
 </div>
 </section>
 
@@ -210,84 +221,59 @@ IVR, RCS Messaging and Lead Generation services to help your business grow faste
 <h2>About Us</h2>
 <div class="about">
 <p>
-About Us
-Bhumi Marketing is a trusted digital marketing and automation service provider based in India. We help businesses, startups, and NGOs to build their online presence and increase customer engagement.
-Our services include digital marketing, lead generation, CRM setup, WhatsApp API integration, and automation solutions. We believe in affordable pricing, honest communication, and delivering real results.
-Our mission is to support growing organizations with modern digital tools and reliable marketing strategies.
+Bhumi Marketing is a trusted digital marketing and automation company in India.
+We support businesses, startups and NGOs with affordable and result-oriented solutions.
 </p>
 </div>
 </section>
 
 <section class="section" id="contact">
 <h2>Contact Us</h2>
+
 <div class="contact-box">
-  <p><strong>Mobile:</strong> +91 9887700059</p>
-  <p><strong>Email:</strong> bhumimarketing.info.gov@gmail.com</p>
-  <p><strong>Office Address:</strong><br>
-     Bhumi Marketing<br>
-     Jaipur, Rajasthan – 302001<br>
-     India
-  </p>
-  <p><strong>Business Hours:</strong><br>
-     Monday – Saturday: 10:00 AM – 7:00 PM
-  </p>
-  <p><strong>WhatsApp:</strong>
-     <a href="https://wa.me/919887700059" target="_blank">
-       Click to Chat
-     </a>
-  </p>
+<p><strong>Mobile:</strong> 9887700059</p>
+<p><strong>Email:</strong> bhumimarketing.info.gov@gmail.com</p>
+<p><strong>Location:</strong> Jaipur, Rajasthan, India</p>
+</div>
+
+<div class="contact-form">
+<form>
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Company Name</label>
+<input type="text">
+
+<label>Email Address</label>
+<input type="email" required>
+
+<label>Mobile</label>
+<input type="tel" required>
+
+<label>Your Message</label>
+<textarea></textarea>
+
+<div class="form-checkbox">
+<input type="checkbox">
+<span>Opt in for weekly alerts via SMS, WhatsApp, RCS & Email.</span>
+</div>
+
+<button class="form-btn">Submit</button>
+</form>
 </div>
 </section>
 
 <section class="section" id="privacy">
 <h2>Privacy Policy</h2>
 <div class="policy">
-<p>
-Privacy Policy – Bhumi Marketing
-Bhumi Marketing respects your privacy and is committed to protecting the personal information you share with us.
-Information We Collect
-We may collect your name, mobile number, email address, and business details when you contact us or use our services.
-How We Use Information
-To provide digital marketing and automation services
-To contact you regarding inquiries, support, or updates
-To improve our services and customer experience
-Data Protection
-We do not sell, rent, or share your personal information with third parties except where required by law.
-Cookies
-Our website may use cookies to enhance user experience and analyze website traffic.
-Consent
-By using our website, you consent to our Privacy Policy.
-Contact
-If you have any questions about this Privacy Policy, please contact us at:
-Email: bhumimarketing.info.gov@gmail.com
-Mobile: 9887700059
-</p>
+<p>Your data is secure with Bhumi Marketing. We never sell or misuse personal information.</p>
 </div>
 </section>
 
 <section class="section" id="terms">
 <h2>Terms & Conditions</h2>
 <div class="policy">
-<p>
-Terms & Conditions – Bhumi Marketing
-By accessing and using the Bhumi Marketing website, you agree to the following terms and conditions.
-Services
-Bhumi Marketing provides digital marketing, CRM, automation, and WhatsApp API related services. Service details and pricing may change without prior notice.
-Payments
-All payments made for services are non-refundable unless explicitly mentioned in a written agreement.
-User Responsibility
-You agree not to misuse our services or website for any illegal or unauthorized purpose.
-Intellectual Property
-All website content, logos, and designs are the property of Bhumi Marketing and may not be copied without permission.
-Limitation of Liability
-Bhumi Marketing will not be liable for any direct or indirect damages arising from the use of our services or website.
-Changes
-We reserve the right to update these terms at any time without prior notice.
-Contact
-For any questions regarding these terms, contact us at:
-Email: bhumimarketing.info.gov@gmail.com
-Mobile: 9887700059
-</p>
+<p>All services are subject to terms. Payments are non-refundable unless agreed in writing.</p>
 </div>
 </section>
 
@@ -295,11 +281,9 @@ Mobile: 9887700059
 © 2025 Bhumi Marketing | All Rights Reserved
 </footer>
 
-<!-- WhatsApp Floating Button -->
 <a href="https://wa.me/919887700059" class="whatsapp-float" target="_blank">
 <span>💬</span>
 </a>
 
 </body>
 </html>
-
