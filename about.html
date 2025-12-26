@@ -1,27 +1,267 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>About | Bhumi Marketing</title>
-<link rel="icon" href="favicon.png">
+<meta charset="UTF-8">
+<title>About Us | Bhumi Marketing</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="About Bhumi Marketing – Digital Marketing & Automation Company in India">
+
 <style>
-body{margin:0;font-family:Arial;background:#f4f6f9}
-header,footer{background:#0d47a1;color:#fff;padding:15px}
-.section{max-width:1200px;margin:auto;padding:40px;background:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* HEADER */
+header{background:#0d47a1}
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.logo-area img{
+    height:42px;
+    background:#fff;
+    padding:4px;
+    border-radius:6px;
+}
+.logo-area span{
+    color:#fff;
+    font-size:22px;
+    font-weight:700;
+}
+nav a{
+    color:#fff;
+    margin-left:18px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+/* PAGE TITLE */
+.page-title{
+    padding:90px 20px 40px;
+    text-align:center;
+}
+.page-title h1{
+    font-size:40px;
+    color:#0d47a1;
+}
+
+/* ABOUT MAIN */
+.about-main{
+    max-width:1100px;
+    margin:0 auto 80px;
+    background:#fff;
+    padding:45px;
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+.about-main p{
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* MISSION / VISION */
+.mv{
+    padding:80px 20px;
+}
+.mv-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+.mv-box{
+    background:#fff;
+    padding:35px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+.mv-box h3{
+    color:#0d47a1;
+    margin-bottom:12px;
+}
+.mv-box p{
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* WHY US */
+.why{
+    background:#0d47a1;
+    color:#fff;
+    padding:80px 20px;
+}
+.why h2{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:50px;
+}
+.why-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    text-align:center;
+}
+.why-box{
+    background:rgba(255,255,255,0.12);
+    padding:30px;
+    border-radius:12px;
+}
+.why-box h4{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:16px;
+    font-size:14px;
+}
+
+/* FLOATING CHAT */
+.chat-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    text-align:center;
+    font-size:28px;
+    line-height:60px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    z-index:9999;
+    text-decoration:none;
+}
+.chat-float:hover{background:#1ebe5d}
+
+@media(max-width:600px){
+    .page-title h1{font-size:30px}
+    nav{display:none}
+}
 </style>
 </head>
+
 <body>
 
-<header><a href="index.html" style="color:#fff">← Home</a></header>
+<!-- HEADER -->
+<header>
+<div class="header-inner">
+  <div class="logo-area">
+    <img src="logo.png" alt="Bhumi Marketing">
+    <span>Bhumi Marketing</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</div>
+</header>
 
-<div class="section">
-<h2>About Us</h2>
+<!-- TITLE -->
+<section class="page-title">
+<h1>About Us</h1>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="about-main">
 <p>
 Bhumi Marketing is a trusted digital marketing and automation company in India.
-We help businesses and NGOs grow with modern tools.
+We help businesses, startups, and NGOs grow with affordable, scalable, and
+result-oriented digital solutions.
+<br><br>
+Our expertise includes Digital Marketing, CRM solutions, WhatsApp API integration,
+IVR systems, RCS messaging, and complete business automation. We focus on
+building long-term partnerships by delivering measurable results, transparent
+communication, and reliable support.
 </p>
-</div>
+</section>
 
-<footer>© 2025 Bhumi Marketing</footer>
+<!-- MISSION / VISION -->
+<section class="mv">
+<div class="mv-grid">
+
+  <div class="mv-box">
+    <h3>Our Mission</h3>
+    <p>
+    To empower businesses with modern digital tools and automation solutions
+    that drive growth, efficiency, and customer engagement.
+    </p>
+  </div>
+
+  <div class="mv-box">
+    <h3>Our Vision</h3>
+    <p>
+    To become a leading digital growth partner for startups, SMEs, and NGOs
+    across India by delivering innovative and affordable solutions.
+    </p>
+  </div>
+
+  <div class="mv-box">
+    <h3>Our Values</h3>
+    <p>
+    Transparency, commitment, innovation, and customer success are the core
+    values that guide everything we do.
+    </p>
+  </div>
+
+</div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+<h2>Why Bhumi Marketing</h2>
+
+<div class="why-grid">
+  <div class="why-box">
+    <h4>Result Driven</h4>
+    <p>Focus on real business outcomes</p>
+  </div>
+  <div class="why-box">
+    <h4>Affordable</h4>
+    <p>Solutions for startups & SMEs</p>
+  </div>
+  <div class="why-box">
+    <h4>Automation Experts</h4>
+    <p>CRM, WhatsApp, IVR & RCS</p>
+  </div>
+  <div class="why-box">
+    <h4>Trusted Support</h4>
+    <p>Reliable & responsive service</p>
+  </div>
+</div>
+</section>
+
+<footer>
+© 2025 Bhumi Marketing | All Rights Reserved
+</footer>
+
+<a href="https://wa.me/919887700059" class="chat-float" target="_blank">💬</a>
+
 </body>
 </html>
