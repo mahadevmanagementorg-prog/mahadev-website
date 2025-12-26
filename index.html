@@ -14,10 +14,12 @@ body{
     color:#333;
     line-height:1.6;
 }
+
+/* HEADER */
 header{
     background:linear-gradient(90deg,#0d47a1,#1976d2);
     color:#fff;
-    padding:25px 20px;
+    padding:20px;
     position:sticky;
     top:0;
     z-index:1000;
@@ -30,7 +32,21 @@ header{
     align-items:center;
     flex-wrap:wrap;
 }
-header h1{font-size:26px}
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.logo-area img{
+    height:48px;
+    background:#fff;
+    padding:5px;
+    border-radius:6px;
+}
+.logo-area span{
+    font-size:26px;
+    font-weight:bold;
+}
 nav a{
     color:#fff;
     margin-left:15px;
@@ -39,6 +55,7 @@ nav a{
 }
 nav a:hover{text-decoration:underline}
 
+/* HERO */
 .hero{
     background:#fff;
     padding:70px 20px;
@@ -49,8 +66,13 @@ nav a:hover{text-decoration:underline}
     color:#0d47a1;
     margin-bottom:15px;
 }
-.hero p{font-size:18px;max-width:800px;margin:auto}
+.hero p{
+    font-size:18px;
+    max-width:800px;
+    margin:auto;
+}
 
+/* SECTION */
 .section{
     padding:60px 20px;
     max-width:1200px;
@@ -58,11 +80,12 @@ nav a:hover{text-decoration:underline}
 }
 .section h2{
     color:#0d47a1;
-    margin-bottom:20px;
+    margin-bottom:25px;
     font-size:30px;
     text-align:center;
 }
 
+/* FEATURES */
 .features{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -80,6 +103,7 @@ nav a:hover{text-decoration:underline}
     color:#1976d2;
 }
 
+/* ABOUT / POLICY */
 .about,.policy{
     background:#fff;
     padding:30px;
@@ -109,8 +133,8 @@ nav a:hover{text-decoration:underline}
 }
 .contact-form label{
     font-weight:600;
-    margin-bottom:6px;
     display:block;
+    margin-bottom:6px;
 }
 .contact-form input,
 .contact-form textarea{
@@ -152,6 +176,7 @@ nav a:hover{text-decoration:underline}
 }
 .form-btn:hover{background:#000}
 
+/* FOOTER */
 footer{
     background:#222;
     color:#fff;
@@ -160,7 +185,7 @@ footer{
     margin-top:40px;
 }
 
-/* WhatsApp Button */
+/* WHATSAPP */
 .whatsapp-float{
     position:fixed;
     width:55px;
@@ -178,7 +203,7 @@ footer{
 .whatsapp-float:hover{background:#1ebe5d}
 
 @media(max-width:600px){
-    header h1{font-size:22px}
+    .logo-area span{font-size:20px}
     .hero h2{font-size:30px}
 }
 </style>
@@ -188,7 +213,10 @@ footer{
 
 <header>
 <div class="header-inner">
-<h1>Bhumi Marketing</h1>
+<div class="logo-area">
+<img src="logo.png" alt="Bhumi Marketing Logo">
+<span>Bhumi Marketing</span>
+</div>
 <nav>
 <a href="#home">Home</a>
 <a href="#features">Features</a>
@@ -202,15 +230,13 @@ footer{
 
 <section class="hero" id="home">
 <h2>Grow Your Business With Bhumi Marketing</h2>
-<p>
-Digital Marketing, CRM, WhatsApp API, IVR & RCS solutions to grow your business faster.
-</p>
+<p>Digital Marketing, CRM, WhatsApp API, IVR & RCS solutions to grow your business faster.</p>
 </section>
 
 <section class="section" id="features">
 <h2>Our Features</h2>
 <div class="features">
-<div class="feature-box"><h3>Digital Marketing</h3><p>Grow brand visibility</p></div>
+<div class="feature-box"><h3>Digital Marketing</h3><p>Increase brand visibility</p></div>
 <div class="feature-box"><h3>WhatsApp API</h3><p>Automated messaging</p></div>
 <div class="feature-box"><h3>CRM Solutions</h3><p>Lead & customer management</p></div>
 <div class="feature-box"><h3>Lead Generation</h3><p>High quality leads</p></div>
@@ -266,7 +292,7 @@ We support businesses, startups and NGOs with affordable and result-oriented sol
 <section class="section" id="privacy">
 <h2>Privacy Policy</h2>
 <div class="policy">
-<p>Your data is secure with Bhumi Marketing. We never sell or misuse personal information.</p>
+<p>Your data is safe with Bhumi Marketing. We never sell or misuse personal information.</p>
 </div>
 </section>
 
