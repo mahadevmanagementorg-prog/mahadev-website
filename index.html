@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Bhumi Marketing | Home</title>
+<title>Bhumi Marketing | Digital Marketing & Automation</title>
 
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bhumi Marketing provides Digital Marketing, CRM, WhatsApp API, IVR & RCS Solutions">
+<meta name="description" content="Bhumi Marketing provides Digital Marketing, CRM, WhatsApp API, IVR & RCS Solutions to grow leads, engagement and revenue.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -19,7 +19,7 @@ body{
 /* HERO */
 .hero{
     background:#ffffff;
-    padding:110px 20px;
+    padding:120px 20px 100px;
     text-align:center;
 }
 .hero h1{
@@ -32,14 +32,16 @@ body{
     max-width:850px;
     margin:auto;
     margin-bottom:35px;
+    line-height:1.6;
 }
 .hero .btn{
     background:#0d47a1;
     color:#fff;
-    padding:15px 36px;
+    padding:15px 38px;
     border-radius:30px;
     text-decoration:none;
     font-weight:600;
+    font-size:16px;
 }
 
 /* WHY CHOOSE US */
@@ -72,6 +74,7 @@ body{
 }
 .why-box p{
     font-size:15px;
+    line-height:1.6;
 }
 
 /* STATS */
@@ -112,6 +115,7 @@ body{
     margin:auto;
     margin-bottom:35px;
     font-size:17px;
+    line-height:1.6;
 }
 .cta a{
     background:#25D366;
@@ -153,28 +157,33 @@ footer{
 
 @media(max-width:600px){
     .hero h1{font-size:30px}
+    .hero p{font-size:16px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- COMMON HEADER LOAD -->
+<!-- HEADER LOAD -->
 <div id="header"></div>
 <script>
 fetch("header.html")
 .then(r => r.text())
-.then(d => document.getElementById("header").innerHTML = d);
+.then(d => document.getElementById("header").innerHTML = d)
+.catch(()=>{
+ document.getElementById("header").innerHTML =
+ "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+});
 </script>
 
 <!-- HERO -->
 <section class="hero">
 <h1>Grow Your Business With Bhumi Marketing</h1>
 <p>
-Digital Marketing, CRM, WhatsApp API, IVR & RCS Solutions  
-designed to increase leads, engagement and revenue.
+Digital Marketing, CRM, WhatsApp API, IVR & RCS solutions  
+designed to increase leads, customer engagement and revenue.
 </p>
-<a href="contact.html" class="btn">Start Now</a>
+<a href="contact.html" class="btn">Get Started</a>
 </section>
 
 <!-- WHY CHOOSE -->
@@ -194,12 +203,12 @@ designed to increase leads, engagement and revenue.
 
   <div class="why-box">
     <h3>Affordable Pricing</h3>
-    <p>Best solutions at prices suitable for startups & SMEs.</p>
+    <p>Solutions designed for startups, SMEs and growing businesses.</p>
   </div>
 
   <div class="why-box">
     <h3>Trusted Support</h3>
-    <p>Dedicated support team for smooth and reliable service.</p>
+    <p>Reliable and responsive support for smooth operations.</p>
   </div>
 </div>
 </section>
@@ -230,8 +239,8 @@ designed to increase leads, engagement and revenue.
 <section class="cta">
 <h2>Ready to Grow Your Business?</h2>
 <p>
-Talk to our experts today and get the best digital & automation
-solution for your business.
+Talk to our experts today and get the best digital marketing
+and automation solution for your business.
 </p>
 <a href="https://wa.me/919887700059" target="_blank">Chat on WhatsApp</a>
 </section>
