@@ -6,6 +6,7 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Bhumi Marketing for Digital Marketing, CRM & Automation Solutions">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -17,7 +18,7 @@ body{
 
 /* PAGE TITLE */
 .page-title{
-    padding:60px 20px 30px;
+    padding:70px 20px 30px;
     text-align:center;
 }
 .page-title h1{
@@ -44,7 +45,7 @@ body{
 /* FORM */
 .contact-form{
     max-width:520px;
-    margin:0 auto 60px;
+    margin:0 auto 80px;
     background:#fff;
     padding:35px 30px;
     border-radius:16px;
@@ -83,9 +84,7 @@ body{
     font-size:12px;
     margin:18px 0 22px;
 }
-.form-check input{
-    margin-top:3px;
-}
+.form-check input{margin-top:3px}
 
 /* BUTTON */
 .submit-btn{
@@ -100,15 +99,6 @@ body{
     cursor:pointer;
 }
 .submit-btn:hover{background:#000}
-
-/* FOOTER */
-footer{
-    background:#222;
-    color:#fff;
-    text-align:center;
-    padding:16px;
-    font-size:14px;
-}
 
 /* FLOATING CHAT */
 .chat-float{
@@ -137,7 +127,7 @@ footer{
 
 <body>
 
-<!-- COMMON HEADER LOAD -->
+<!-- COMMON HEADER -->
 <div id="header"></div>
 <script>
 fetch("header.html")
@@ -145,36 +135,39 @@ fetch("header.html")
 .then(d => document.getElementById("header").innerHTML = d);
 </script>
 
+<!-- TITLE -->
 <section class="page-title">
 <h1>Contact Us</h1>
 </section>
 
+<!-- INFO -->
 <section class="contact-info">
 <p><strong>Mobile:</strong> 9887700059</p>
 <p><strong>Email:</strong> bhumimarketing.info.gov@gmail.com</p>
 <p><strong>Location:</strong> Jaipur, Rajasthan, India</p>
 </section>
 
+<!-- FORM -->
 <section class="contact-form">
-<form>
+<form onsubmit="sendMessage(); return false;">
 
 <label>Full Name</label>
-<input type="text" required>
+<input type="text" id="name" required>
 
 <label>Company Name</label>
-<input type="text">
+<input type="text" id="company">
 
 <label>Email Address</label>
-<input type="email" required>
+<input type="email" id="email" required>
 
 <label>Mobile</label>
-<input type="tel" required>
+<input type="tel" id="mobile" required>
 
 <label>Your Message</label>
-<textarea placeholder="Write your message here..."></textarea>
+<textarea id="message" placeholder="Write your message here..."></textarea>
 
 <div class="form-check">
-<input type="checkbox">
+<input type="checkbox" checked>
 <span>Opt in for weekly alerts via SMS, WhatsApp, RCS & Email.</span>
 </div>
 
@@ -183,11 +176,38 @@ fetch("header.html")
 </form>
 </section>
 
-<footer>
-© 2025 Bhumi Marketing | All Rights Reserved
-</footer>
+<!-- COMMON FOOTER -->
+<div id="footer"></div>
+<script>
+fetch("footer.html")
+.then(r => r.text())
+.then(d => document.getElementById("footer").innerHTML = d);
+</script>
 
+<!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/919887700059" class="chat-float" target="_blank">💬</a>
+
+<!-- FORM SCRIPT -->
+<script>
+function sendMessage(){
+  var name = document.getElementById("name").value;
+  var company = document.getElementById("company").value;
+  var email = document.getElementById("email").value;
+  var mobile = document.getElementById("mobile").value;
+  var message = document.getElementById("message").value;
+
+  var text =
+    "New Enquiry - Bhumi Marketing%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Company: " + company + "%0A" +
+    "Email: " + email + "%0A" +
+    "Mobile: " + mobile + "%0A" +
+    "Message: " + message;
+
+  window.open("https://wa.me/919887700059?text=" + text, "_blank");
+  window.location.href = "thankyou.html";
+}
+</script>
 
 </body>
 </html>
