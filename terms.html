@@ -6,7 +6,7 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Terms & Conditions of Bhumi Marketing">
+<meta name="description" content="Terms & Conditions of Bhumi Marketing covering services, payments, usage policies and legal responsibilities.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -18,7 +18,7 @@ body{
 
 /* PAGE TITLE */
 .page-title{
-    padding:60px 20px 30px;
+    padding:70px 20px 30px;
     text-align:center;
 }
 .page-title h1{
@@ -29,7 +29,7 @@ body{
 /* CONTENT */
 .terms-box{
     max-width:1000px;
-    margin:0 auto 70px;
+    margin:0 auto 80px;
     background:#fff;
     padding:45px;
     border-radius:16px;
@@ -37,8 +37,8 @@ body{
 }
 .terms-box h2{
     color:#0d47a1;
+    margin-top:32px;
     margin-bottom:10px;
-    margin-top:30px;
     font-size:22px;
 }
 .terms-box p{
@@ -77,18 +77,23 @@ footer{
 
 @media(max-width:600px){
     .page-title h1{font-size:28px}
+    .terms-box{padding:30px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- COMMON HEADER LOAD -->
+<!-- HEADER LOAD -->
 <div id="header"></div>
 <script>
 fetch("header.html")
 .then(r => r.text())
-.then(d => document.getElementById("header").innerHTML = d);
+.then(d => document.getElementById("header").innerHTML = d)
+.catch(()=>{
+ document.getElementById("header").innerHTML =
+ "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+});
 </script>
 
 <!-- TITLE -->
@@ -101,66 +106,74 @@ fetch("header.html")
 
 <p>
 By accessing and using the Bhumi Marketing website and services, you agree
-to comply with and be bound by the following Terms & Conditions.
+to comply with and be legally bound by the following Terms & Conditions.
 </p>
 
 <h2>Services</h2>
 <p>
 Bhumi Marketing provides digital marketing, CRM solutions, WhatsApp API,
-IVR systems, RCS messaging, and business automation services. Service
-details, features, and pricing may change without prior notice.
+IVR systems, RCS messaging, SMS, email marketing, and business automation
+services. Service features, scope, and pricing may change from time to
+time without prior notice.
 </p>
 
-<h2>Payments & Refunds</h2>
+<h2>Payments & Billing</h2>
 <p>
-All payments made for services are non-refundable unless explicitly stated
-in a written agreement. Payment terms will be communicated before service
-activation.
+All payments for services must be made in advance unless otherwise agreed
+in writing. Fees paid are non-refundable unless explicitly mentioned in a
+signed agreement or proposal.
 </p>
 
 <h2>User Responsibilities</h2>
 <p>
-You agree to provide accurate information and not to misuse our services
-for any illegal, fraudulent, or unauthorized activities.
+You agree to provide accurate and complete information and to use our
+services only for lawful purposes. Any misuse, spam, fraudulent, or
+unauthorized activity is strictly prohibited.
 </p>
 
 <h2>Intellectual Property</h2>
 <p>
-All website content, designs, logos, text, and materials are the property
-of Bhumi Marketing and may not be copied, reproduced, or distributed
-without written permission.
+All content on this website, including text, graphics, logos, designs,
+software, and materials, is the intellectual property of Bhumi Marketing
+and may not be copied, reproduced, or distributed without prior written
+permission.
 </p>
 
 <h2>Limitation of Liability</h2>
 <p>
-Bhumi Marketing shall not be liable for any direct, indirect, incidental,
-or consequential damages arising from the use of our services or website.
+Bhumi Marketing shall not be held liable for any direct, indirect,
+incidental, or consequential damages resulting from the use or inability
+to use our services or website.
 </p>
 
-<h2>Third-Party Services</h2>
+<h2>Third-Party Platforms</h2>
 <p>
-Our services may involve third-party platforms or tools. Bhumi Marketing
-is not responsible for issues arising from third-party services.
+Some services may depend on third-party platforms such as WhatsApp, SMS
+gateways, RCS providers, or analytics tools. Bhumi Marketing is not
+responsible for outages, policy changes, or issues arising from such
+third-party services.
 </p>
 
-<h2>Termination</h2>
+<h2>Service Suspension or Termination</h2>
 <p>
-We reserve the right to suspend or terminate services if terms are violated
-or misuse is detected.
+We reserve the right to suspend or terminate services without notice if
+there is a violation of these Terms & Conditions or misuse of our systems.
 </p>
 
 <h2>Changes to Terms</h2>
 <p>
 Bhumi Marketing may update these Terms & Conditions at any time. Continued
-use of the website or services indicates acceptance of updated terms.
+use of our website or services after changes indicates acceptance of the
+updated terms.
 </p>
 
 <h2>Contact Information</h2>
 <p>
-If you have any questions regarding these Terms & Conditions, please contact
-us:<br><br>
+If you have any questions regarding these Terms & Conditions, please
+contact us:
+<br><br>
 <strong>Email:</strong> bhumimarketing.info.gov@gmail.com<br>
-<strong>Mobile:</strong> 9887700059
+<strong>Mobile:</strong> +91 98877 00059
 </p>
 
 </section>
