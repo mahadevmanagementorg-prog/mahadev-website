@@ -17,9 +17,9 @@ body{
     color:#333;
 }
 
-/* TITLE */
+/* PAGE TITLE */
 .page-title{
-    padding:70px 20px 40px;
+    padding:80px 20px 40px;
     text-align:center;
 }
 .page-title h1{
@@ -27,9 +27,9 @@ body{
     color:#0d47a1;
 }
 
-/* CARDS */
+/* FEATURE CARDS */
 .features-cards{
-    padding:40px 20px 80px;
+    padding:40px 20px 70px;
 }
 .cards-grid{
     max-width:1200px;
@@ -40,7 +40,7 @@ body{
 }
 .card{
     background:#fff;
-    padding:30px 25px;
+    padding:32px 25px;
     border-radius:14px;
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,0.08);
@@ -55,7 +55,7 @@ body{
 
 /* DETAILS */
 .details{
-    background:#fff;
+    background:#ffffff;
     padding:80px 20px;
 }
 .detail-box{
@@ -64,7 +64,7 @@ body{
 }
 .detail-box h2{
     color:#0d47a1;
-    margin-bottom:15px;
+    margin-bottom:14px;
 }
 .detail-box ul{
     padding-left:20px;
@@ -89,6 +89,7 @@ body{
     max-width:700px;
     margin:auto;
     margin-bottom:25px;
+    font-size:16px;
 }
 .cta a{
     background:#25D366;
@@ -122,18 +123,28 @@ footer{
     font-size:28px;
     line-height:60px;
     text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    z-index:9999;
+}
+
+@media(max-width:600px){
+    .page-title h1{font-size:28px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- HEADER LOAD -->
 <div id="header"></div>
 <script>
 fetch("header.html")
-.then(r=>r.text())
-.then(d=>document.getElementById("header").innerHTML=d);
+.then(r => r.text())
+.then(d => document.getElementById("header").innerHTML = d)
+.catch(()=>{
+ document.getElementById("header").innerHTML =
+ "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+});
 </script>
 
 <!-- TITLE -->
