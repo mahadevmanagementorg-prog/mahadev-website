@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Services | Bhumi Marketing</title>
+
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bhumi Marketing Services – Digital Marketing, CRM, WhatsApp API, Automation & Analytics">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f5f7fb;
+  color:#333;
+}
+
+/* PAGE TITLE */
+.page-title{
+  padding:70px 20px 30px;
+  text-align:center;
+}
+.page-title h1{
+  font-size:38px;
+  color:#0d47a1;
+}
+.page-title p{
+  max-width:800px;
+  margin:10px auto 0;
+  font-size:16px;
+}
+
+/* SERVICES GRID */
+.services{
+  padding:70px 20px;
+}
+.services-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.service-box{
+  background:#fff;
+  padding:35px 30px;
+  border-radius:16px;
+  box-shadow:0 12px 28px rgba(0,0,0,0.08);
+}
+.service-box h3{
+  color:#0d47a1;
+  margin-bottom:10px;
+}
+.service-box ul{
+  padding-left:18px;
+}
+.service-box li{
+  font-size:14px;
+  line-height:1.8;
+  margin-bottom:6px;
+}
+
+/* CTA */
+.cta{
+  background:#0d47a1;
+  color:#fff;
+  padding:80px 20px;
+  text-align:center;
+}
+.cta h2{
+  font-size:34px;
+  margin-bottom:20px;
+}
+.cta p{
+  max-width:750px;
+  margin:auto;
+  margin-bottom:30px;
+  font-size:17px;
+}
+.cta a{
+  background:#25D366;
+  color:#fff;
+  padding:15px 40px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* FLOATING CHAT */
+.chat-float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:25px;
+  right:25px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  text-align:center;
+  font-size:28px;
+  line-height:60px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+  z-index:9999;
+  text-decoration:none;
+}
+.chat-float:hover{background:#1ebe5d}
+
+@media(max-width:600px){
+  .page-title h1{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- COMMON HEADER -->
+<div id="header"></div>
+<script>
+fetch("header.html")
+.then(r => r.text())
+.then(d => document.getElementById("header").innerHTML = d);
+</script>
+
+<!-- TITLE -->
+<section class="page-title">
+<h1>Our Services</h1>
+<p>
+End-to-end digital marketing, automation and communication solutions
+designed to grow your business.
+</p>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+<div class="services-grid">
+
+  <div class="service-box">
+    <h3>Digital Marketing</h3>
+    <ul>
+      <li>Search Engine Optimization (SEO)</li>
+      <li>Google & Social Media Ads</li>
+      <li>Social Media Management</li>
+      <li>Content & Video Marketing</li>
+      <li>Lead Generation Campaigns</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h3>CRM Solutions</h3>
+    <ul>
+      <li>Lead Management CRM</li>
+      <li>Auto Lead Capture</li>
+      <li>Follow-up Reminder System</li>
+      <li>Sales Pipeline Management</li>
+      <li>Custom CRM (Business / NGO)</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h3>WhatsApp API Services</h3>
+    <ul>
+      <li>Official WhatsApp Business API</li>
+      <li>Bulk WhatsApp Messaging</li>
+      <li>Automated Replies & Chatbot</li>
+      <li>OTP, Alerts & Notifications</li>
+      <li>CRM + Website Integration</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h3>RCS Messaging</h3>
+    <ul>
+      <li>Branded RCS Campaigns</li>
+      <li>Rich Media Messages</li>
+      <li>High Open-Rate Promotions</li>
+      <li>Transactional Notifications</li>
+      <li>CTA Button Messaging</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h3>SMS & Email Marketing</h3>
+    <ul>
+      <li>Promotional & Transactional SMS</li>
+      <li>OTP & Alert SMS</li>
+      <li>Bulk Email Campaigns</li>
+      <li>Auto Email Follow-ups</li>
+      <li>Newsletter System</li>
+    </ul>
+  </div>
+
+  <div class="service-box">
+    <h3>Automation & Analytics</h3>
+    <ul>
+      <li>Website → CRM Automation</li>
+      <li>WhatsApp / SMS Auto Follow-up</li>
+      <li>Chatbot Automation</li>
+      <li>Campaign Performance Reports</li>
+      <li>ROI & Growth Analysis</li>
+    </ul>
+  </div>
+
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2>Need Any of These Services?</h2>
+<p>
+Talk to our experts and get a customized solution for your business.
+</p>
+<a href="contact.html">Contact Us</a>
+</section>
+
+<!-- COMMON FOOTER -->
+<div id="footer"></div>
+<script>
+fetch("footer.html")
+.then(r => r.text())
+.then(d => document.getElementById("footer").innerHTML = d);
+</script>
+
+<a href="https://wa.me/919887700059" class="chat-float" target="_blank">💬</a>
+
+</body>
+</html>
