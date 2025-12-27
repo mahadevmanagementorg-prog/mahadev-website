@@ -4,24 +4,20 @@
 <meta charset="UTF-8">
 <title>Our Features | Bhumi Marketing</title>
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="favicon.png">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bhumi Marketing Features – Digital Marketing, CRM, WhatsApp API, RCS, SMS, Automation & Analytics">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f7f9fc;
+    background:#f5f7fb;
     color:#333;
 }
 
 /* HEADER */
-header{
-    background:#ffffff;
-    border-bottom:1px solid #e6e9ef;
-}
+header{background:#0d47a1}
 .header-inner{
     max-width:1200px;
     margin:auto;
@@ -36,65 +32,104 @@ header{
     gap:10px;
 }
 .logo-area img{
-    height:40px;
+    height:42px;
+    background:#fff;
+    padding:4px;
+    border-radius:6px;
 }
 .logo-area span{
+    color:#fff;
     font-size:22px;
     font-weight:700;
-    color:#0d47a1;
 }
 nav a{
+    color:#fff;
     margin-left:18px;
     text-decoration:none;
     font-weight:600;
-    color:#333;
-}
-nav a:hover{
-    color:#0d47a1;
 }
 
-/* FEATURES SECTION */
-.features-section{
-    padding:90px 20px;
+/* PAGE TITLE */
+.page-title{
+    padding:70px 20px 40px;
     text-align:center;
 }
-.features-title{
-    font-size:36px;
-    font-weight:700;
+.page-title h1{
+    font-size:40px;
     color:#0d47a1;
-    margin-bottom:60px;
 }
 
-.features-grid{
+/* FEATURE CARDS */
+.features-cards{
+    padding:40px 20px 80px;
+}
+.cards-grid{
     max-width:1200px;
     margin:auto;
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:30px;
 }
-
-.feature-card{
+.card{
     background:#fff;
-    padding:40px 25px;
+    padding:35px 25px;
     border-radius:14px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    transition:all 0.3s ease;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
-.feature-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 40px rgba(0,0,0,0.12);
-}
-
-.feature-card h3{
-    font-size:22px;
-    font-weight:600;
+.card h3{
     color:#1a73e8;
-    margin-bottom:12px;
+    margin-bottom:10px;
+}
+.card p{
+    font-size:15px;
 }
 
-.feature-card p{
-    font-size:16px;
-    color:#333;
+/* DETAILS */
+.details{
+    background:#ffffff;
+    padding:90px 20px;
+}
+.detail-box{
+    max-width:1000px;
+    margin:0 auto 70px;
+}
+.detail-box h2{
+    color:#0d47a1;
+    margin-bottom:15px;
+}
+.detail-box ul{
+    padding-left:20px;
+}
+.detail-box ul li{
+    margin-bottom:8px;
+    line-height:1.7;
+}
+
+/* CTA */
+.cta{
+    background:#0d47a1;
+    color:#fff;
+    padding:80px 20px;
+    text-align:center;
+}
+.cta h2{
+    font-size:34px;
+    margin-bottom:20px;
+}
+.cta p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:30px;
+    font-size:17px;
+}
+.cta a{
+    background:#25D366;
+    color:#fff;
+    padding:15px 40px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
 }
 
 /* FOOTER */
@@ -102,14 +137,31 @@ footer{
     background:#222;
     color:#fff;
     text-align:center;
-    padding:18px;
-    margin-top:80px;
+    padding:16px;
     font-size:14px;
 }
 
-/* RESPONSIVE */
+/* FLOATING CHAT */
+.chat-float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    text-align:center;
+    font-size:28px;
+    line-height:60px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    z-index:9999;
+    text-decoration:none;
+}
+.chat-float:hover{background:#1ebe5d}
+
 @media(max-width:600px){
-    .features-title{font-size:30px}
+    .page-title h1{font-size:28px}
     nav{display:none}
 }
 </style>
@@ -117,55 +169,130 @@ footer{
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <div class="header-inner">
-    <div class="logo-area">
-      <img src="logo.png" alt="Bhumi Marketing Logo">
-      <span>Bhumi Marketing</span>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+<div class="header-inner">
+  <div class="logo-area">
+    <img src="logo.png">
+    <span>Bhumi Marketing</span>
   </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="features.html">Features</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
 </header>
 
-<!-- FEATURES -->
-<section class="features-section">
-  <h2 class="features-title">Our Features</h2>
-
-  <div class="features-grid">
-
-    <div class="feature-card">
-      <h3>Digital Marketing</h3>
-      <p>Increase brand visibility</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>WhatsApp API</h3>
-      <p>Automated messaging</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>CRM Solutions</h3>
-      <p>Lead & customer management</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Lead Generation</h3>
-      <p>High quality leads</p>
-    </div>
-
-  </div>
+<section class="page-title">
+<h1>Our Features</h1>
 </section>
 
-<!-- FOOTER -->
+<section class="features-cards">
+<div class="cards-grid">
+  <div class="card"><h3>Digital Marketing</h3><p>SEO, Ads & Branding</p></div>
+  <div class="card"><h3>CRM Solutions</h3><p>Lead & Sales Management</p></div>
+  <div class="card"><h3>WhatsApp API</h3><p>Automation & Chatbots</p></div>
+  <div class="card"><h3>RCS Messaging</h3><p>Rich Interactive Campaigns</p></div>
+  <div class="card"><h3>SMS & Email</h3><p>Bulk & Automated Marketing</p></div>
+  <div class="card"><h3>Automation</h3><p>System Integrations</p></div>
+  <div class="card"><h3>Analytics</h3><p>Reports & Growth Tracking</p></div>
+</div>
+</section>
+
+<section class="details">
+
+<div class="detail-box">
+<h2>1. Digital Marketing Services</h2>
+<ul>
+<li>Search Engine Optimization (SEO)</li>
+<li>Google Ads & Social Media Ads</li>
+<li>Social Media Management</li>
+<li>Content & Video Marketing</li>
+<li>Lead Generation Campaigns</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>2. CRM Solutions (Customer Relationship Management)</h2>
+<ul>
+<li>Lead Management CRM</li>
+<li>Auto Lead Capture (Website / Ads / WhatsApp)</li>
+<li>Follow-up Reminder System</li>
+<li>Sales Pipeline Management</li>
+<li>Customer Data & History Tracking</li>
+<li>Custom CRM Setup (Business / NGO)</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>3. WhatsApp API Services</h2>
+<ul>
+<li>Official WhatsApp Business API</li>
+<li>Bulk WhatsApp Messaging</li>
+<li>Automated WhatsApp Replies</li>
+<li>WhatsApp Chatbot Integration</li>
+<li>OTP, Alerts & Notifications</li>
+<li>Website + CRM + WhatsApp Integration</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>4. RCS Messaging Services</h2>
+<ul>
+<li>Rich Communication Services (RCS) Campaigns</li>
+<li>Branded Messages (Logo, Button, Images)</li>
+<li>High Open Rate Promotional Messages</li>
+<li>Transactional & Notification RCS</li>
+<li>Interactive CTA Buttons</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>5. SMS & Email Marketing</h2>
+<ul>
+<li>Promotional & Transactional SMS</li>
+<li>OTP & Alert SMS</li>
+<li>Bulk Email Campaigns</li>
+<li>Auto Email Follow-ups</li>
+<li>Newsletter System</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>6. Automation & Integration</h2>
+<ul>
+<li>Website to CRM Auto Lead Transfer</li>
+<li>WhatsApp + CRM Automation</li>
+<li>Auto Follow-up (WhatsApp / SMS / Email)</li>
+<li>Chatbot Automation</li>
+<li>Payment Gateway Integration</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>7. Analytics & Reporting</h2>
+<ul>
+<li>Campaign Performance Reports</li>
+<li>Lead & Conversion Tracking</li>
+<li>WhatsApp & CRM Reports</li>
+<li>ROI & Growth Analysis</li>
+</ul>
+</div>
+
+</section>
+
+<section class="cta">
+<h2>Need These Features for Your Business?</h2>
+<p>Contact Bhumi Marketing today and get a customized digital & automation solution.</p>
+<a href="contact.html">Contact Us</a>
+</section>
+
 <footer>
 © 2025 Bhumi Marketing | All Rights Reserved
 </footer>
+
+<a href="https://wa.me/919887700059" class="chat-float" target="_blank">💬</a>
 
 </body>
 </html>
