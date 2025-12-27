@@ -1,11 +1,70 @@
 <header>
+  <style>
+    header{background:#0d47a1}
+    .header-inner{
+        max-width:1200px;
+        margin:auto;
+        padding:15px 20px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .logo-area{
+        display:flex;
+        align-items:center;
+        gap:10px;
+    }
+    .logo-area img{
+        height:40px;
+        background:#fff;
+        padding:4px;
+        border-radius:6px;
+    }
+    .logo-area span{
+        color:#fff;
+        font-size:20px;
+        font-weight:700;
+    }
+
+    .desktop-nav a{
+        color:#fff;
+        margin-left:16px;
+        text-decoration:none;
+        font-weight:600;
+    }
+
+    .menu-btn{
+        display:none;
+        font-size:26px;
+        color:#fff;
+        cursor:pointer;
+    }
+
+    .mobile-nav{
+        display:none;
+        background:#0d47a1;
+        flex-direction:column;
+        text-align:center;
+    }
+    .mobile-nav a{
+        color:#fff;
+        padding:14px;
+        text-decoration:none;
+        border-top:1px solid rgba(255,255,255,0.2);
+    }
+
+    @media(max-width:768px){
+        .desktop-nav{display:none}
+        .menu-btn{display:block}
+    }
+  </style>
+
   <div class="header-inner">
     <div class="logo-area">
-      <img src="logo.png" alt="Bhumi Marketing">
+      <img src="logo.png">
       <span>Bhumi Marketing</span>
     </div>
 
-    <!-- Desktop Menu -->
     <nav class="desktop-nav">
       <a href="index.html">Home</a>
       <a href="features.html">Features</a>
@@ -15,11 +74,9 @@
       <a href="terms.html">Terms</a>
     </nav>
 
-    <!-- Mobile Menu Button -->
     <div class="menu-btn" onclick="toggleMenu()">☰</div>
   </div>
 
-  <!-- Mobile Menu -->
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
     <a href="features.html">Features</a>
@@ -28,4 +85,11 @@
     <a href="privacy.html">Privacy</a>
     <a href="terms.html">Terms</a>
   </div>
+
+  <script>
+    function toggleMenu(){
+      var m = document.getElementById("mobileNav");
+      m.style.display = (m.style.display === "flex") ? "none" : "flex";
+    }
+  </script>
 </header>
