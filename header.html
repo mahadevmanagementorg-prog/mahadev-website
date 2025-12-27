@@ -1,66 +1,90 @@
 <header>
 <style>
-.header{
+/* ===== HEADER BASE ===== */
+.bm-header{
     background:#0d47a1;
-    padding:15px 20px;
+    padding:12px 20px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
+    position:relative;
 }
-.logo{
+
+/* ===== LOGO ===== */
+.bm-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+.bm-logo img{
+    height:40px;
+    width:auto;
+}
+.bm-logo span{
     color:#fff;
-    font-size:22px;
-    font-weight:bold;
+    font-size:20px;
+    font-weight:700;
 }
-.nav{
+
+/* ===== NAV DESKTOP ===== */
+.bm-nav{
     display:flex;
     gap:18px;
 }
-.nav a{
+.bm-nav a{
     color:#fff;
     text-decoration:none;
     font-weight:600;
+    font-size:15px;
 }
-.menu-btn{
+
+/* ===== MENU ICON ===== */
+.bm-menu-btn{
     display:none;
     font-size:26px;
     color:#fff;
     cursor:pointer;
 }
 
-/* MOBILE */
-@media(max-width:768px){
-    .nav{
+/* ===== MOBILE ===== */
+@media (max-width:768px){
+    .bm-menu-btn{
+        display:block;
+    }
+    .bm-nav{
         position:absolute;
-        top:60px;
+        top:64px;
         left:0;
         width:100%;
         background:#0d47a1;
         flex-direction:column;
         display:none;
-        padding:15px 0;
+        z-index:9999;
     }
-    .nav a{
-        padding:12px;
+    .bm-nav a{
+        padding:14px;
         text-align:center;
-        display:block;
-        border-top:1px solid rgba(255,255,255,0.2);
+        border-top:1px solid rgba(255,255,255,0.25);
     }
-    .menu-btn{
-        display:block;
-    }
-    .nav.active{
+    .bm-nav.show{
         display:flex;
     }
 }
 </style>
 
-<div class="header">
-    <div class="logo">Bhumi Marketing</div>
+<div class="bm-header">
 
-    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <!-- LOGO -->
+    <div class="bm-logo">
+        <img src="logo.png" alt="Bhumi Marketing Logo">
+        <span>Bhumi Marketing</span>
+    </div>
 
-    <nav class="nav" id="navMenu">
+    <!-- MENU BUTTON -->
+    <div class="bm-menu-btn" id="bmMenuBtn">☰</div>
+
+    <!-- NAV -->
+    <nav class="bm-nav" id="bmNav">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="features.html">Features</a>
@@ -69,11 +93,17 @@
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
     </nav>
+
 </div>
 
 <script>
-function toggleMenu(){
-    document.getElementById("navMenu").classList.toggle("active");
-}
+(function(){
+    var btn = document.getElementById("bmMenuBtn");
+    var nav = document.getElementById("bmNav");
+
+    btn.addEventListener("click", function(){
+        nav.classList.toggle("show");
+    });
+})();
 </script>
 </header>
