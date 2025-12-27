@@ -6,7 +6,7 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Bhumi Marketing Services – Digital Marketing, CRM, WhatsApp API, Automation & Analytics">
+<meta name="description" content="Bhumi Marketing Services – Digital Marketing, CRM, WhatsApp API, RCS, SMS, Email, Automation & Analytics Solutions for Business and NGOs.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -18,7 +18,7 @@ body{
 
 /* PAGE TITLE */
 .page-title{
-  padding:70px 20px 30px;
+  padding:80px 20px 35px;
   text-align:center;
 }
 .page-title h1{
@@ -26,14 +26,15 @@ body{
   color:#0d47a1;
 }
 .page-title p{
-  max-width:800px;
-  margin:10px auto 0;
+  max-width:820px;
+  margin:12px auto 0;
   font-size:16px;
+  line-height:1.6;
 }
 
 /* SERVICES GRID */
 .services{
-  padding:70px 20px;
+  padding:70px 20px 90px;
 }
 .services-grid{
   max-width:1200px;
@@ -44,13 +45,13 @@ body{
 }
 .service-box{
   background:#fff;
-  padding:35px 30px;
+  padding:36px 30px;
   border-radius:16px;
   box-shadow:0 12px 28px rgba(0,0,0,0.08);
 }
 .service-box h3{
   color:#0d47a1;
-  margin-bottom:10px;
+  margin-bottom:12px;
 }
 .service-box ul{
   padding-left:18px;
@@ -70,13 +71,14 @@ body{
 }
 .cta h2{
   font-size:34px;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
 .cta p{
-  max-width:750px;
+  max-width:760px;
   margin:auto;
   margin-bottom:30px;
   font-size:17px;
+  line-height:1.6;
 }
 .cta a{
   background:#25D366;
@@ -85,6 +87,16 @@ body{
   border-radius:30px;
   text-decoration:none;
   font-weight:600;
+  font-size:16px;
+}
+
+/* FOOTER */
+footer{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:16px;
+  font-size:14px;
 }
 
 /* FLOATING CHAT */
@@ -114,12 +126,16 @@ body{
 
 <body>
 
-<!-- COMMON HEADER -->
+<!-- HEADER LOAD -->
 <div id="header"></div>
 <script>
 fetch("header.html")
 .then(r => r.text())
-.then(d => document.getElementById("header").innerHTML = d);
+.then(d => document.getElementById("header").innerHTML = d)
+.catch(()=>{
+ document.getElementById("header").innerHTML =
+ "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+});
 </script>
 
 <!-- TITLE -->
@@ -127,7 +143,7 @@ fetch("header.html")
 <h1>Our Services</h1>
 <p>
 End-to-end digital marketing, automation and communication solutions
-designed to grow your business.
+designed to grow your business efficiently.
 </p>
 </section>
 
@@ -139,7 +155,7 @@ designed to grow your business.
     <h3>Digital Marketing</h3>
     <ul>
       <li>Search Engine Optimization (SEO)</li>
-      <li>Google & Social Media Ads</li>
+      <li>Google Ads & Social Media Advertising</li>
       <li>Social Media Management</li>
       <li>Content & Video Marketing</li>
       <li>Lead Generation Campaigns</li>
@@ -150,10 +166,10 @@ designed to grow your business.
     <h3>CRM Solutions</h3>
     <ul>
       <li>Lead Management CRM</li>
-      <li>Auto Lead Capture</li>
+      <li>Auto Lead Capture (Website / Ads / WhatsApp)</li>
       <li>Follow-up Reminder System</li>
       <li>Sales Pipeline Management</li>
-      <li>Custom CRM (Business / NGO)</li>
+      <li>Custom CRM Setup (Business / NGO)</li>
     </ul>
   </div>
 
@@ -162,9 +178,9 @@ designed to grow your business.
     <ul>
       <li>Official WhatsApp Business API</li>
       <li>Bulk WhatsApp Messaging</li>
-      <li>Automated Replies & Chatbot</li>
+      <li>Automated Replies & Chatbot Integration</li>
       <li>OTP, Alerts & Notifications</li>
-      <li>CRM + Website Integration</li>
+      <li>Website + CRM Integration</li>
     </ul>
   </div>
 
@@ -172,8 +188,8 @@ designed to grow your business.
     <h3>RCS Messaging</h3>
     <ul>
       <li>Branded RCS Campaigns</li>
-      <li>Rich Media Messages</li>
-      <li>High Open-Rate Promotions</li>
+      <li>Rich Media & Interactive Messages</li>
+      <li>High Open-Rate Promotional Messages</li>
       <li>Transactional Notifications</li>
       <li>CTA Button Messaging</li>
     </ul>
@@ -183,21 +199,21 @@ designed to grow your business.
     <h3>SMS & Email Marketing</h3>
     <ul>
       <li>Promotional & Transactional SMS</li>
-      <li>OTP & Alert SMS</li>
+      <li>OTP & Alert SMS Services</li>
       <li>Bulk Email Campaigns</li>
       <li>Auto Email Follow-ups</li>
-      <li>Newsletter System</li>
+      <li>Newsletter & Broadcast System</li>
     </ul>
   </div>
 
   <div class="service-box">
     <h3>Automation & Analytics</h3>
     <ul>
-      <li>Website → CRM Automation</li>
+      <li>Website to CRM Automation</li>
       <li>WhatsApp / SMS Auto Follow-up</li>
       <li>Chatbot Automation</li>
       <li>Campaign Performance Reports</li>
-      <li>ROI & Growth Analysis</li>
+      <li>ROI & Business Growth Analysis</li>
     </ul>
   </div>
 
@@ -208,18 +224,15 @@ designed to grow your business.
 <section class="cta">
 <h2>Need Any of These Services?</h2>
 <p>
-Talk to our experts and get a customized solution for your business.
+Connect with our experts and get a customized digital and automation
+solution for your business.
 </p>
 <a href="contact.html">Contact Us</a>
 </section>
 
-<!-- COMMON FOOTER -->
-<div id="footer"></div>
-<script>
-fetch("footer.html")
-.then(r => r.text())
-.then(d => document.getElementById("footer").innerHTML = d);
-</script>
+<footer>
+© 2025 Bhumi Marketing | All Rights Reserved
+</footer>
 
 <a href="https://wa.me/919887700059" class="chat-float" target="_blank">💬</a>
 
