@@ -6,7 +6,7 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Privacy Policy of Bhumi Marketing">
+<meta name="description" content="Privacy Policy of Bhumi Marketing covering data collection, usage, security, cookies and user rights.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -18,7 +18,7 @@ body{
 
 /* PAGE TITLE */
 .page-title{
-    padding:60px 20px 30px;
+    padding:70px 20px 30px;
     text-align:center;
 }
 .page-title h1{
@@ -29,7 +29,7 @@ body{
 /* CONTENT */
 .policy-box{
     max-width:1000px;
-    margin:0 auto 70px;
+    margin:0 auto 80px;
     background:#fff;
     padding:45px;
     border-radius:16px;
@@ -37,8 +37,8 @@ body{
 }
 .policy-box h2{
     color:#0d47a1;
+    margin-top:32px;
     margin-bottom:10px;
-    margin-top:30px;
     font-size:22px;
 }
 .policy-box p{
@@ -77,18 +77,23 @@ footer{
 
 @media(max-width:600px){
     .page-title h1{font-size:28px}
+    .policy-box{padding:30px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- COMMON HEADER LOAD -->
+<!-- HEADER LOAD -->
 <div id="header"></div>
 <script>
 fetch("header.html")
 .then(r => r.text())
-.then(d => document.getElementById("header").innerHTML = d);
+.then(d => document.getElementById("header").innerHTML = d)
+.catch(()=>{
+ document.getElementById("header").innerHTML =
+ "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+});
 </script>
 
 <!-- TITLE -->
@@ -102,61 +107,63 @@ fetch("header.html")
 <p>
 Bhumi Marketing respects your privacy and is committed to protecting the
 personal information you share with us. This Privacy Policy explains how
-we collect, use, and protect your information.
+we collect, use, store, and safeguard your information.
 </p>
 
 <h2>Information We Collect</h2>
 <p>
-We may collect personal information such as your name, email address,
-mobile number, company details, and any other information you provide
-through our website forms or communication channels.
+We may collect personal information including your name, email address,
+mobile number, company details, and any information submitted through our
+website forms, WhatsApp, email, or other communication channels.
 </p>
 
 <h2>How We Use Your Information</h2>
 <p>
-• To provide digital marketing, CRM, WhatsApp API, IVR, and automation services.<br>
-• To respond to inquiries, requests, and support needs.<br>
-• To send service updates, offers, and important notifications (with consent).
+• To provide digital marketing, CRM, WhatsApp API, IVR, RCS, and automation services.<br>
+• To respond to inquiries, service requests, and customer support needs.<br>
+• To send service-related updates, alerts, and promotional communication (with consent).
 </p>
 
-<h2>Data Protection</h2>
+<h2>Data Protection & Security</h2>
 <p>
-We implement appropriate security measures to protect your personal data.
-We do not sell, rent, or share your personal information with third parties,
-except when required by law.
+We use appropriate technical and organizational security measures to
+protect your personal data. We do not sell, rent, or trade your personal
+information to third parties, except where required by law.
 </p>
 
-<h2>Cookies</h2>
+<h2>Cookies & Tracking</h2>
 <p>
-Our website may use cookies to enhance user experience, analyze traffic,
-and improve our services. You can choose to disable cookies through your
-browser settings.
+Our website may use cookies and similar technologies to improve user
+experience, analyze traffic, and enhance our services. You may disable
+cookies through your browser settings if you prefer.
 </p>
 
 <h2>Third-Party Services</h2>
 <p>
-We may use third-party tools or platforms (such as analytics or messaging
-services) to support our operations. These services follow their own
-privacy policies.
+We may use third-party tools such as analytics, payment gateways, or
+messaging platforms to support our operations. These third parties have
+their own privacy policies governing the use of your data.
 </p>
 
-<h2>Your Consent</h2>
+<h2>User Consent</h2>
 <p>
-By using our website and services, you consent to this Privacy Policy and
-the collection and use of your information as described.
+By accessing or using our website and services, you consent to the
+collection and use of your information as described in this Privacy Policy.
 </p>
 
 <h2>Policy Updates</h2>
 <p>
-Bhumi Marketing may update this Privacy Policy from time to time. Any
-changes will be posted on this page.
+Bhumi Marketing reserves the right to update this Privacy Policy at any
+time. Any changes will be posted on this page with an updated effective date.
 </p>
 
-<h2>Contact Us</h2>
+<h2>Contact Information</h2>
 <p>
-If you have any questions regarding this Privacy Policy, please contact us:<br><br>
+If you have any questions or concerns regarding this Privacy Policy, you
+may contact us at:
+<br><br>
 <strong>Email:</strong> bhumimarketing.info.gov@gmail.com<br>
-<strong>Mobile:</strong> 9887700059
+<strong>Mobile:</strong> +91 98877 00059
 </p>
 
 </section>
