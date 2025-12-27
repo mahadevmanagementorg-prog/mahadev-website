@@ -6,7 +6,7 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Contact Bhumi Marketing for Digital Marketing, CRM & Automation Solutions">
+<meta name="description" content="Contact Bhumi Marketing for Digital Marketing, CRM, WhatsApp API & Automation Solutions in India.">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -18,7 +18,7 @@ body{
 
 /* PAGE TITLE */
 .page-title{
-    padding:70px 20px 30px;
+    padding:80px 20px 30px;
     text-align:center;
 }
 .page-title h1{
@@ -39,13 +39,13 @@ body{
 }
 .contact-info p{
     font-size:16px;
-    margin:6px 0;
+    margin:8px 0;
 }
 
 /* FORM */
 .contact-form{
     max-width:520px;
-    margin:0 auto 80px;
+    margin:0 auto 90px;
     background:#fff;
     padding:35px 30px;
     border-radius:16px;
@@ -127,7 +127,7 @@ body{
 
 <body>
 
-<!-- COMMON HEADER -->
+<!-- HEADER -->
 <div id="header"></div>
 <script>
 fetch("header.html")
@@ -142,14 +142,14 @@ fetch("header.html")
 
 <!-- INFO -->
 <section class="contact-info">
-<p><strong>Mobile:</strong> 9887700059</p>
+<p><strong>Mobile:</strong> +91 98877 00059</p>
 <p><strong>Email:</strong> bhumimarketing.info.gov@gmail.com</p>
 <p><strong>Location:</strong> Jaipur, Rajasthan, India</p>
 </section>
 
 <!-- FORM -->
 <section class="contact-form">
-<form onsubmit="sendMessage(); return false;">
+<form id="contactForm">
 
 <label>Full Name</label>
 <input type="text" id="name" required>
@@ -168,15 +168,15 @@ fetch("header.html")
 
 <div class="form-check">
 <input type="checkbox" checked>
-<span>Opt in for weekly alerts via SMS, WhatsApp, RCS & Email.</span>
+<span>I agree to receive updates via SMS, WhatsApp, RCS & Email.</span>
 </div>
 
-<button class="submit-btn">Submit</button>
+<button type="submit" class="submit-btn">Submit</button>
 
 </form>
 </section>
 
-<!-- COMMON FOOTER -->
+<!-- FOOTER -->
 <div id="footer"></div>
 <script>
 fetch("footer.html")
@@ -189,25 +189,30 @@ fetch("footer.html")
 
 <!-- FORM SCRIPT -->
 <script>
-function sendMessage(){
-  var name = document.getElementById("name").value;
-  var company = document.getElementById("company").value;
-  var email = document.getElementById("email").value;
-  var mobile = document.getElementById("mobile").value;
-  var message = document.getElementById("message").value;
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
 
-  var text =
-    "New Enquiry - Bhumi Marketing%0A%0A" +
-    "Name: " + name + "%0A" +
-    "Company: " + company + "%0A" +
-    "Email: " + email + "%0A" +
-    "Mobile: " + mobile + "%0A" +
-    "Message: " + message;
+    var name = document.getElementById("name").value.trim();
+    var company = document.getElementById("company").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var mobile = document.getElementById("mobile").value.trim();
+    var message = document.getElementById("message").value.trim();
 
-  window.open("https://wa.me/919887700059?text=" + text, "_blank");
-  window.location.href = "thankyou.html";
-}
+    var text = 
+        "New Enquiry - Bhumi Marketing\n\n" +
+        "Name: " + name + "\n" +
+        "Company: " + company + "\n" +
+        "Email: " + email + "\n" +
+        "Mobile: " + mobile + "\n" +
+        "Message: " + message;
+
+    var url = "https://wa.me/919887700059?text=" + encodeURIComponent(text);
+    window.open(url, "_blank");
+
+    window.location.href = "thankyou.html";
+});
 </script>
 
 </body>
 </html>
+
