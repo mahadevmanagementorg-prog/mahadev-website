@@ -6,7 +6,6 @@
 
 <link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Contact Bhumi Marketing for Digital Marketing, CRM, WhatsApp API, IVR & RCS Solutions">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -51,71 +50,77 @@ nav a{
 
 /* PAGE TITLE */
 .page-title{
-    padding:90px 20px 40px;
+    padding:60px 20px 30px;
     text-align:center;
 }
 .page-title h1{
-    font-size:40px;
+    font-size:38px;
     color:#0d47a1;
 }
 
-/* CONTACT INFO BOX */
+/* CONTACT INFO */
 .contact-info{
-    max-width:1000px;
-    margin:0 auto 50px;
+    max-width:900px;
+    margin:0 auto 40px;
     background:#0d47a1;
     color:#fff;
-    padding:35px;
+    padding:30px;
     border-radius:14px;
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 .contact-info p{
     font-size:16px;
-    margin:8px 0;
+    margin:6px 0;
 }
 
-/* CONTACT FORM */
-.contact-form-wrap{
-    max-width:550px;
-    margin:0 auto 80px;
+/* FORM */
+.contact-form{
+    max-width:520px;
+    margin:0 auto 60px;
     background:#fff;
     padding:35px 30px;
     border-radius:16px;
     box-shadow:0 15px 35px rgba(0,0,0,0.1);
 }
-.contact-form-wrap label{
+.contact-form label{
     display:block;
     font-weight:600;
-    margin:15px 0 6px;
+    margin:14px 0 6px;
+    font-size:14px;
 }
-.contact-form-wrap input,
-.contact-form-wrap textarea{
+.contact-form input,
+.contact-form textarea{
     width:100%;
     padding:14px;
     border-radius:30px;
     border:1px solid #ddd;
     font-size:14px;
 }
-.contact-form-wrap textarea{
+.contact-form textarea{
     border-radius:14px;
-    resize:none;
     height:120px;
+    resize:none;
 }
-.contact-form-wrap input:focus,
-.contact-form-wrap textarea:focus{
+.contact-form input:focus,
+.contact-form textarea:focus{
     outline:none;
     border-color:#0d47a1;
 }
 
+/* CHECKBOX */
 .form-check{
     display:flex;
     align-items:flex-start;
-    gap:10px;
+    gap:8px;
     font-size:12px;
-    margin:18px 0 25px;
+    margin:18px 0 22px;
+}
+.form-check input{
+    margin-top:3px;
 }
 
+/* BUTTON */
 .submit-btn{
     width:100%;
     padding:14px;
@@ -127,9 +132,7 @@ nav a{
     font-weight:600;
     cursor:pointer;
 }
-.submit-btn:hover{
-    background:#000;
-}
+.submit-btn:hover{background:#000}
 
 /* FOOTER */
 footer{
@@ -160,7 +163,7 @@ footer{
 .chat-float:hover{background:#1ebe5d}
 
 @media(max-width:600px){
-    .page-title h1{font-size:30px}
+    .page-title h1{font-size:28px}
     nav{display:none}
 }
 </style>
@@ -168,11 +171,10 @@ footer{
 
 <body>
 
-<!-- HEADER -->
 <header>
 <div class="header-inner">
   <div class="logo-area">
-    <img src="logo.png" alt="Bhumi Marketing">
+    <img src="logo.png">
     <span>Bhumi Marketing</span>
   </div>
   <nav>
@@ -186,20 +188,17 @@ footer{
 </div>
 </header>
 
-<!-- TITLE -->
 <section class="page-title">
 <h1>Contact Us</h1>
 </section>
 
-<!-- CONTACT INFO -->
 <section class="contact-info">
 <p><strong>Mobile:</strong> 9887700059</p>
 <p><strong>Email:</strong> bhumimarketing.info.gov@gmail.com</p>
 <p><strong>Location:</strong> Jaipur, Rajasthan, India</p>
 </section>
 
-<!-- CONTACT FORM -->
-<section class="contact-form-wrap">
+<section class="contact-form">
 <form>
 
 <label>Full Name</label>
@@ -215,7 +214,7 @@ footer{
 <input type="tel" required>
 
 <label>Your Message</label>
-<textarea></textarea>
+<textarea placeholder="Write your message here..."></textarea>
 
 <div class="form-check">
 <input type="checkbox">
