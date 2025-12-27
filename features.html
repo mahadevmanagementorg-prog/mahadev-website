@@ -8,15 +8,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO -->
-<meta name="description" content="Bhumi Marketing offers Digital Marketing, CRM Solutions, WhatsApp API, RCS Messaging, SMS & Email Marketing, Automation and Analytics services for business and NGOs.">
+<meta name="description" content="Bhumi Marketing provides Digital Marketing, CRM Solutions, WhatsApp API, RCS Messaging, SMS & Email Marketing, Automation and Analytics services for businesses and NGOs.">
 <meta name="keywords" content="Digital Marketing, CRM, WhatsApp API, RCS Messaging, SMS Marketing, Automation, Analytics, Bhumi Marketing">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Our Features | Bhumi Marketing">
-<meta property="og:description" content="Complete Digital Marketing, CRM, WhatsApp API, RCS, SMS, Automation & Analytics Solutions">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://mahadevservices.site/features.html">
-<meta property="og:image" content="https://mahadevservices.site/og-image.png">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -145,45 +138,28 @@ footer{
     .page-title h1{font-size:28px}
 }
 </style>
-
-<!-- SERVICE SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Bhumi Marketing",
-  "url": "https://mahadevservices.site",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-9887700059",
-    "contactType": "customer support"
-  },
-  "areaServed": "IN",
-  "sameAs": [
-    "https://wa.me/919887700059"
-  ]
-}
-</script>
 </head>
 
 <body>
 
-<!-- COMMON HEADER LOAD -->
+<!-- HEADER -->
 <div id="header"></div>
 <script>
 fetch("header.html")
 .then(r => r.text())
 .then(d => document.getElementById("header").innerHTML = d)
-.catch(() => {
-  document.getElementById("header").innerHTML =
-  "<div style='padding:15px;text-align:center;background:#0d47a1;color:#fff'>Bhumi Marketing</div>";
+.catch(()=>{
+document.getElementById("header").innerHTML =
+"<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
 });
 </script>
 
+<!-- PAGE TITLE -->
 <section class="page-title">
 <h1>Our Features</h1>
 </section>
 
+<!-- FEATURE CARDS -->
 <section class="features-cards">
 <div class="cards-grid">
   <div class="card"><h3>Digital Marketing</h3><p>SEO, Ads & Branding</p></div>
@@ -196,21 +172,102 @@ fetch("header.html")
 </div>
 </section>
 
-<!-- DETAILS SECTION (unchanged content) -->
+<!-- DETAILS SECTION -->
 <section class="details">
-<!-- your existing detail-box blocks remain same -->
+
+<div class="detail-box">
+<h2>1. Digital Marketing Services</h2>
+<ul>
+<li>Search Engine Optimization (SEO)</li>
+<li>Google Ads & Social Media Ads</li>
+<li>Social Media Management</li>
+<li>Content & Video Marketing</li>
+<li>Lead Generation Campaigns</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>2. CRM Solutions (Customer Relationship Management)</h2>
+<ul>
+<li>Lead Management CRM</li>
+<li>Auto Lead Capture (Website / Ads / WhatsApp)</li>
+<li>Follow-up Reminder System</li>
+<li>Sales Pipeline Management</li>
+<li>Customer Data & History Tracking</li>
+<li>Custom CRM Setup (Business / NGO)</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>3. WhatsApp API Services</h2>
+<ul>
+<li>Official WhatsApp Business API</li>
+<li>Bulk WhatsApp Messaging</li>
+<li>Automated WhatsApp Replies</li>
+<li>WhatsApp Chatbot Integration</li>
+<li>OTP, Alerts & Notifications</li>
+<li>Website + CRM + WhatsApp Integration</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>4. RCS Messaging Services</h2>
+<ul>
+<li>Rich Communication Services (RCS) Campaigns</li>
+<li>Branded Messages (Logo, Button, Images)</li>
+<li>High Open Rate Promotional Messages</li>
+<li>Transactional & Notification RCS</li>
+<li>Interactive CTA Buttons</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>5. SMS & Email Marketing</h2>
+<ul>
+<li>Promotional & Transactional SMS</li>
+<li>OTP & Alert SMS</li>
+<li>Bulk Email Campaigns</li>
+<li>Auto Email Follow-ups</li>
+<li>Newsletter System</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>6. Automation & Integration</h2>
+<ul>
+<li>Website to CRM Auto Lead Transfer</li>
+<li>WhatsApp + CRM Automation</li>
+<li>Auto Follow-up (WhatsApp / SMS / Email)</li>
+<li>Chatbot Automation</li>
+<li>Payment Gateway Integration</li>
+</ul>
+</div>
+
+<div class="detail-box">
+<h2>7. Analytics & Reporting</h2>
+<ul>
+<li>Campaign Performance Reports</li>
+<li>Lead & Conversion Tracking</li>
+<li>WhatsApp & CRM Reports</li>
+<li>ROI & Growth Analysis</li>
+</ul>
+</div>
+
 </section>
 
+<!-- CTA -->
 <section class="cta">
 <h2>Need These Features for Your Business?</h2>
 <p>Contact Bhumi Marketing today and get a customized digital & automation solution.</p>
 <a href="contact.html">Contact Us</a>
 </section>
 
+<!-- FOOTER -->
 <footer>
 © 2025 Bhumi Marketing | All Rights Reserved
 </footer>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/919887700059" class="chat-float" target="_blank" aria-label="WhatsApp Chat">💬</a>
 
 </body>
