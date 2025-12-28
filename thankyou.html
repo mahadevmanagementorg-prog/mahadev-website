@@ -10,23 +10,33 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+
+/* FULL PAGE FIX */
+html, body{
+  height:100%;
+}
+
 body{
   font-family:Arial, Helvetica, sans-serif;
   background:#f5f7fb;
   color:#333;
+  display:flex;
+  flex-direction:column;
 }
 
-/* THANK YOU BOX */
-.thank-wrapper{
-  min-height:70vh;
+/* MAIN CONTENT */
+main{
+  flex:1;
   display:flex;
   align-items:center;
   justify-content:center;
   padding:40px 20px;
 }
+
+/* THANK YOU BOX */
 .thank-box{
   background:#fff;
-  max-width:540px;
+  max-width:520px;
   width:100%;
   text-align:center;
   padding:50px 40px;
@@ -98,7 +108,7 @@ footer{
 
 <body>
 
-<!-- HEADER LOAD -->
+<!-- HEADER -->
 <div id="header"></div>
 <script>
 fetch("header.html")
@@ -110,8 +120,8 @@ fetch("header.html")
 });
 </script>
 
-<!-- THANK YOU CONTENT -->
-<section class="thank-wrapper">
+<!-- MAIN CONTENT -->
+<main>
   <div class="thank-box">
     <h1>Thank You!</h1>
     <p>
@@ -124,8 +134,9 @@ fetch("header.html")
       Chat on WhatsApp
     </a>
   </div>
-</section>
+</main>
 
+<!-- FOOTER -->
 <footer>
 © 2025 Bhumi Marketing | All Rights Reserved
 </footer>
