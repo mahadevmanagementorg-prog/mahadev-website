@@ -5,7 +5,7 @@
 <title>OPT-IN | Bhumi Marketing</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Customer Opt-in form for WhatsApp, RCS, SMS & Email communication">
+<meta name="description" content="Customer opt-in consent for WhatsApp, RCS, SMS & Email">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,26 +15,26 @@ body{
   color:#333;
 }
 
-/* HEADER */
-.header{
+/* HEADER SECTION */
+.optin-header{
   background:#1f2937;
   color:#fff;
-  padding:60px 20px;
+  padding:70px 20px;
   text-align:center;
 }
-.header h1{
+.optin-header h1{
   font-size:42px;
 }
-.header p{
+.optin-header p{
   margin-top:10px;
   font-size:16px;
   opacity:.9;
 }
 
-/* FORM BOX */
-.form-wrapper{
+/* FORM CARD */
+.optin-wrapper{
   max-width:800px;
-  margin:-40px auto 80px;
+  margin:-50px auto 80px;
   background:#fff;
   padding:40px;
   border-radius:16px;
@@ -62,18 +62,20 @@ input:focus{
   border-color:#1f2937;
 }
 
-.checkbox{
+/* CHECKBOX */
+.consent{
   display:flex;
   gap:10px;
   margin-top:22px;
   font-size:13px;
   line-height:1.5;
 }
-.checkbox input{
+.consent input{
   width:auto;
   margin-top:4px;
 }
 
+/* BUTTON */
 button{
   margin-top:30px;
   width:100%;
@@ -99,46 +101,53 @@ footer{
 
 /* MOBILE */
 @media(max-width:600px){
-  .header h1{font-size:30px}
-  .form-wrapper{padding:25px}
+  .optin-header h1{font-size:30px}
+  .optin-wrapper{padding:25px}
 }
 </style>
 </head>
 
 <body>
 
+<!-- COMMON HEADER -->
+<div id="header"></div>
+<script>
+fetch("header.html")
+.then(r => r.text())
+.then(d => document.getElementById("header").innerHTML = d);
+</script>
+
 <!-- HEADER -->
-<section class="header">
+<section class="optin-header">
   <h1>OPT-IN</h1>
   <p>Configure opt-in consent for WhatsApp, RCS, SMS & Email</p>
 </section>
 
 <!-- FORM -->
-<section class="form-wrapper">
+<section class="optin-wrapper">
+<form id="optinForm">
 
-<form onsubmit="submitOptin(); return false;">
+  <label>Full Name</label>
+  <input type="text" id="name" required>
 
-<label>Full Name</label>
-<input type="text" id="name" required>
+  <label>Mobile Number</label>
+  <input type="tel" id="mobile" required>
 
-<label>Mobile Number</label>
-<input type="tel" id="mobile" required>
+  <label>Email Address</label>
+  <input type="email" id="email" required>
 
-<label>Email Address</label>
-<input type="email" id="email" required>
+  <label>Website Opt-in URL</label>
+  <input type="url" value="https://mahadevservices.site/contact" readonly>
 
-<label>Website Opt-in URL</label>
-<input type="url" value="https://yourwebsite.com/contact" readonly>
+  <div class="consent">
+    <input type="checkbox" checked required>
+    <span>
+      I allow <strong>Bhumi Marketing</strong> to send me messages via
+      <strong>RCS, WhatsApp, SMS and Email</strong>.
+    </span>
+  </div>
 
-<div class="checkbox">
-  <input type="checkbox" checked required>
-  <span>
-    I allow <strong>Bhumi Marketing</strong> to send me messages via
-    <strong>RCS, WhatsApp, SMS and Email</strong>.
-  </span>
-</div>
-
-<button type="submit">SUBMIT</button>
+  <button type="submit">SUBMIT</button>
 
 </form>
 </section>
@@ -149,30 +158,34 @@ footer{
 
 <!-- FINAL WORKING SCRIPT -->
 <script>
-function submitOptin(){
+document.getElementById("optinForm").addEventListener("submit", function(e){
+  e.preventDefault();
 
-  var name   = document.getElementById("name").value;
-  var mobile = document.getElementById("mobile").value;
-  var email  = document.getElementById("email").value;
+  var name   = document.getElementById("name").value.trim();
+  var mobile = document.getElementById("mobile").value.trim();
+  var email  = document.getElementById("email").value.trim();
 
-  var message =
-    "NEW OPT-IN RECEIVED\n\n"+
-    "Name: " + name + "\n"+
-    "Mobile: " + mobile + "\n"+
-    "Email: " + email + "\n\n"+
-    "User has given consent to receive messages via RCS, WhatsApp, SMS & Email.";
+  if(name === "" || mobile === "" || email === ""){
+    alert("Please fill all required fields");
+    return;
+  }
 
-  // WhatsApp open with auto message
-  window.open(
-    "https://wa.me/919887700059?text=" + encodeURIComponent(message),
-    "_blank"
-  );
+  var msg =
+    "NEW OPT-IN RECEIVED\n\n" +
+    "Name: " + name + "\n" +
+    "Mobile: " + mobile + "\n" +
+    "Email: " + email + "\n\n" +
+    "Consent provided for RCS, WhatsApp, SMS & Email.";
 
-  // Redirect to thank you page
+  // WhatsApp open (policy safe – user initiated)
+  window.location.href =
+    "https://wa.me/919887700059?text=" + encodeURIComponent(msg);
+
+  // Thank You redirect
   setTimeout(function(){
-    window.location.href = "thankyou.html";
-  }, 800);
-}
+    window.location.replace("thankyou.html");
+  }, 1200);
+});
 </script>
 
 </body>
