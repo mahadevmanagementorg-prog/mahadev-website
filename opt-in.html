@@ -1,32 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OPT-IN | Bhumi Marketing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f6f9;
+}
+
+/* TOP */
+.top{
+  background:#0d47a1;
+  color:#fff;
+  padding:70px 20px;
+  text-align:center;
+}
+.top h1{font-size:40px}
+
+/* CARD */
+.card{
+  max-width:800px;
+  margin:-50px auto 80px;
+  background:#fff;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+/* FORM */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.full{grid-column:1/-1}
+
+label{
+  font-size:14px;
+  font-weight:600;
+}
+input{
+  width:100%;
+  padding:14px;
+  border-radius:30px;
+  border:1px solid #ddd;
+  margin-top:6px;
+}
+
+/* CHECKBOX */
+.consent{
+  margin-top:20px;
+  font-size:13px;
+}
+
+/* BUTTON */
+button{
+  width:100%;
+  margin-top:25px;
+  padding:16px;
+  border:none;
+  border-radius:30px;
+  background:#0d47a1;
+  color:#fff;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:#0d47a1;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+  .grid{grid-template-columns:1fr}
+  .top h1{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+  <h1>OPT‑IN</h1>
+  <p>Consent for WhatsApp, RCS, SMS & Email</p>
+</div>
+
+<div class="card">
 <form id="optinForm">
 
-  <div class="form-grid">
+  <div class="grid">
 
     <div class="full">
       <label>Name</label>
-      <input type="text" id="name" placeholder="Name" required>
+      <input type="text" id="name" required>
     </div>
 
     <div>
       <label>Number</label>
-      <input type="tel" id="mobile" placeholder="Number" required>
+      <input type="tel" id="mobile" required>
     </div>
 
     <div>
       <label>Email</label>
-      <input type="email" id="email" placeholder="Email" required>
+      <input type="email" id="email" required>
     </div>
 
   </div>
 
   <div class="consent">
-    <label>
-      <input type="checkbox" checked required>
-      I allow <strong>Bhumi Marketing</strong> to send me messages via
-      <strong>RCS, SMS, WhatsApp and Email</strong>.
-    </label>
+    <input type="checkbox" checked required>
+    I allow <strong>Bhumi Marketing</strong> to send me messages via
+    <strong>RCS, SMS, WhatsApp and Email</strong>.
   </div>
 
   <button type="submit">SUBMIT</button>
 
 </form>
+</div>
+
+<footer>
+© 2025 Bhumi Marketing | All Rights Reserved
+</footer>
+
+<script>
+document.getElementById("optinForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  var name=document.getElementById("name").value;
+  var mobile=document.getElementById("mobile").value;
+  var email=document.getElementById("email").value;
+
+  var msg =
+    "NEW OPT-IN\n\n"+
+    "Name: "+name+"\n"+
+    "Mobile: "+mobile+"\n"+
+    "Email: "+email;
+
+  window.location.href =
+    "https://wa.me/919887700059?text="+encodeURIComponent(msg);
+});
+</script>
+
+</body>
+</html>
