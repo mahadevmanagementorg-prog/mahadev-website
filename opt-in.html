@@ -13,7 +13,7 @@ body{
   color:#333;
 }
 
-/* TOP BLUE BAR */
+/* TOP */
 .top{
   background:#0d47a1;
   color:#fff;
@@ -80,11 +80,12 @@ button{
 }
 button:hover{background:#0b3d91}
 
-/* INFO */
+/* INFO TEXT (REAL OPT‑IN) */
 .info{
   margin-top:15px;
   font-size:13px;
   color:#555;
+  line-height:1.6;
 }
 
 /* FOOTER */
@@ -107,7 +108,7 @@ footer{
 
 <body>
 
-<!-- ✅ HEADER WITH FALLBACK -->
+<!-- HEADER WITH FALLBACK -->
 <div id="header"></div>
 <script>
 fetch("header.html")
@@ -130,7 +131,6 @@ fetch("header.html")
 <form id="optinForm">
 
   <div class="grid">
-
     <div class="full">
       <label>Name</label>
       <input type="text" id="name" placeholder="Name" required>
@@ -145,23 +145,26 @@ fetch("header.html")
       <label>Email</label>
       <input type="email" id="email" placeholder="Email" required>
     </div>
-
   </div>
 
+  <!-- CHECKBOX CONSENT -->
   <div class="consent">
     <label>
       <input type="checkbox" checked required>
       I allow <strong>Bhumi Marketing</strong> to send me messages via
-      <strong>RCS, SMS, WhatsApp and Email</strong>.
+      <strong>WhatsApp, RCS, SMS and Email</strong>.
     </label>
   </div>
 
   <button type="submit">SUBMIT</button>
 
+  <!-- REAL WEBSITE OPT‑IN TEXT -->
   <div class="info">
-    This page is used to collect customer opt‑in consent. Users voluntarily
-    provide their details and agree to receive communications from
-    <strong>Bhumi Marketing</strong> via WhatsApp, RCS, SMS and Email.
+    This page is used to collect customer opt‑in consent.
+    Users voluntarily provide their details and explicitly agree
+    to receive communications from
+    <strong>Bhumi Marketing</strong> via
+    <strong>WhatsApp, RCS, SMS and Email</strong>.
   </div>
 
 </form>
