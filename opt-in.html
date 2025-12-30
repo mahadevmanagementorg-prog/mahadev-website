@@ -6,16 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-body{
-    background:#f4f8ff;
-    color:#333;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f4f8ff;color:#333}
 
 /* FORM CARD */
 .container{
@@ -26,20 +18,9 @@ body{
     border-radius:16px;
     box-shadow:0 10px 30px rgba(13,71,161,0.2);
 }
-h2{
-    text-align:center;
-    color:#0d47a1;
-    margin-bottom:25px;
-}
-.form-group{
-    margin-bottom:20px;
-}
-label{
-    display:block;
-    font-weight:600;
-    margin-bottom:6px;
-    color:#0d47a1;
-}
+h2{text-align:center;color:#0d47a1;margin-bottom:25px}
+.form-group{margin-bottom:20px}
+label{display:block;font-weight:600;margin-bottom:6px;color:#0d47a1}
 input{
     width:100%;
     padding:14px 16px;
@@ -48,35 +29,11 @@ input{
     font-size:15px;
     outline:none;
 }
-input:focus{
-    border-color:#1976d2;
-}
-
-/* TWO COLUMN */
-.row{
-    display:flex;
-    gap:20px;
-}
-.row .form-group{
-    flex:1;
-}
-
-/* CHECKBOX */
-.checkbox{
-    display:flex;
-    gap:10px;
-    margin-top:10px;
-}
-.checkbox input{
-    width:auto;
-    margin-top:4px;
-}
-.checkbox label{
-    font-size:14px;
-    line-height:1.5;
-}
-
-/* BUTTON */
+.row{display:flex;gap:20px}
+.row .form-group{flex:1}
+.checkbox{display:flex;gap:10px;margin-top:10px}
+.checkbox input{width:auto;margin-top:4px}
+.checkbox label{font-size:14px;line-height:1.5}
 button{
     width:100%;
     margin-top:25px;
@@ -89,113 +46,103 @@ button{
     font-weight:bold;
     cursor:pointer;
 }
-button:hover{
-    opacity:0.9;
-}
+.note{margin-top:15px;font-size:13px;color:#555}
 
-/* NOTE */
-.note{
-    margin-top:15px;
-    font-size:13px;
-    color:#555;
-}
-
-/* WHATSAPP CHATBOT */
-.whatsapp-chat{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:#fff;
-    padding:14px 18px;
-    border-radius:50px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    font-weight:bold;
-    text-decoration:none;
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-    z-index:999;
-}
-.whatsapp-chat img{
-    width:28px;
-}
-
-/* RESPONSIVE */
 @media(max-width:768px){
-    .row{
-        flex-direction:column;
-    }
+    .row{flex-direction:column}
 }
 </style>
 </head>
 
 <body>
 
-<!-- DYNAMIC HEADER -->
+<!-- HEADER -->
 <div id="header"></div>
 <script>
 fetch("header.html")
-.then(r => r.text())
-.then(d => document.getElementById("header").innerHTML = d)
+.then(r=>r.text())
+.then(d=>document.getElementById("header").innerHTML=d)
 .catch(()=>{
  document.getElementById("header").innerHTML =
- "<div style='background:#0d47a1;color:#fff;padding:16px;text-align:center;font-weight:bold;font-size:18px'>Bhumi Marketing</div>";
+ "<div style='background:#0d47a1;color:#fff;padding:16px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
 });
 </script>
 
 <!-- FORM -->
 <div class="container">
-<form action="#" method="post">
+<form onsubmit="sendOptin();return false;">
 
-    <h2>OPT-IN</h2>
+<h2>OPT-IN</h2>
 
-    <div class="form-group">
-        <label>Name</label>
-        <input type="text" name="name" placeholder="Your Name" required>
-    </div>
+<div class="form-group">
+<label>Name</label>
+<input type="text" id="name" required>
+</div>
 
-    <div class="row">
-        <div class="form-group">
-            <label>Mobile Number</label>
-            <input type="tel" name="mobile" placeholder="Enter Mobile Number" required>
-        </div>
+<div class="row">
+  <div class="form-group">
+    <label>Mobile Number</label>
+    <input type="tel" id="mobile" required>
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" id="email" required>
+  </div>
+</div>
 
-        <div class="form-group">
-            <label>Email</label>
-            <input type="email" name="email" placeholder="Enter Email" required>
-        </div>
-    </div>
+<div class="form-group">
+<label>Website Opt-in URL</label>
+<input type="url" id="url" required>
+</div>
 
-    <div class="form-group">
-        <label>Website Opt-in URL</label>
-        <input type="url" name="optin_url" placeholder="https://example.com/contact" required>
-    </div>
+<div class="checkbox">
+<input type="checkbox" required>
+<label>
+I allow <strong>Bhumi Marketing</strong> to send me messages via
+<strong>RCS, WhatsApp, SMS and Email</strong>.
+</label>
+</div>
 
-    <div class="checkbox">
-        <input type="checkbox" required>
-        <label>
-            I allow <strong>Bhumi Marketing</strong> to send me messages via
-            <strong>RCS, WhatsApp, SMS and Email</strong>.
-        </label>
-    </div>
+<button type="submit">SUBMIT</button>
 
-    <button type="submit">SUBMIT</button>
-
-    <div class="note">
-        This consent is mandatory as per TRAI & Google RCS policies.
-    </div>
+<div class="note">
+This consent is mandatory as per TRAI & Google RCS policies.
+</div>
 
 </form>
 </div>
 
-<!-- WHATSAPP CHATBOT -->
-<a class="whatsapp-chat"
-   href="https://wa.me/919887700059?text=Hello%20Bhumi%20Marketing,%20I%20want%20to%20know%20more"
-   target="_blank">
-   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-   Chat with us
-</a>
+<!-- COMMON CHATBOT -->
+<div id="chatbot"></div>
+<script>
+fetch("chatbot.html")
+.then(r=>r.text())
+.then(d=>document.getElementById("chatbot").innerHTML=d);
+</script>
+
+<script>
+function sendOptin(){
+
+  let msg =
+  "OPT-IN REQUEST - Bhumi Marketing\n\n"+
+  "Name: "+name.value+"\n"+
+  "Mobile: "+mobile.value+"\n"+
+  "Email: "+email.value+"\n"+
+  "Opt-in URL: "+url.value+"\n\n"+
+  "Consent given for RCS, WhatsApp, SMS & Email.";
+
+  // WhatsApp open
+  window.open(
+    "https://wa.me/919887700059?text="+encodeURIComponent(msg),
+    "_blank"
+  );
+
+  // Redirect to Thank You page
+  setTimeout(()=>{
+    window.location.href = "thank-you.html";
+  }, 800);
+}
+</script>
 
 </body>
 </html>
