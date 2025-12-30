@@ -66,7 +66,7 @@ main{
   background:#0d47a1;
   color:#fff;
 }
-.wa-btn{
+.contact-btn{
   background:#25D366;
   color:#fff;
 }
@@ -80,25 +80,6 @@ footer{
   font-size:14px;
 }
 
-/* FLOATING CHAT */
-.chat-float{
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:25px;
-  right:25px;
-  background:#25D366;
-  color:#fff;
-  border-radius:50%;
-  text-align:center;
-  font-size:28px;
-  line-height:60px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.25);
-  z-index:9999;
-  text-decoration:none;
-}
-.chat-float:hover{background:#1ebe5d}
-
 @media(max-width:600px){
   .thank-box h1{font-size:28px}
   .thank-box{padding:40px 25px}
@@ -108,7 +89,7 @@ footer{
 
 <body>
 
-<!-- HEADER -->
+<!-- COMMON HEADER -->
 <div id="header"></div>
 <script>
 fetch("header.html")
@@ -130,9 +111,7 @@ fetch("header.html")
     </p>
 
     <a href="index.html" class="home-btn">Back to Home</a>
-    <a href="https://wa.me/919887700059" target="_blank" class="wa-btn">
-      Chat on WhatsApp
-    </a>
+    <a href="contact.html" class="contact-btn">Contact Us</a>
   </div>
 </main>
 
@@ -141,7 +120,13 @@ fetch("header.html")
 © 2025 Bhumi Marketing | All Rights Reserved
 </footer>
 
-<a href="https://wa.me/919887700059" class="chat-float" target="_blank">💬</a>
+<!-- COMMON WHATSAPP CHATBOT -->
+<div id="chatbot"></div>
+<script>
+fetch("chatbot.html")
+.then(r => r.text())
+.then(d => document.getElementById("chatbot").innerHTML = d);
+</script>
 
 </body>
 </html>
