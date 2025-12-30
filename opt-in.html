@@ -8,19 +8,29 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:Arial, Helvetica, sans-serif;
   background:#f4f6f9;
   color:#333;
 }
 
+/* TOP BLUE BAR */
+.top{
+  background:#0d47a1;
+  color:#fff;
+  padding:70px 20px;
+  text-align:center;
+}
+.top h1{font-size:40px}
+.top p{margin-top:6px;font-size:14px}
+
 /* CARD */
 .card{
   max-width:900px;
-  margin:60px auto;
+  margin:-50px auto 80px;
   background:#fff;
   padding:40px;
   border-radius:18px;
-  box-shadow:0 15px 40px rgba(0,0,0,.12);
+  box-shadow:0 18px 45px rgba(13,71,161,.25);
 }
 
 /* GRID */
@@ -34,20 +44,25 @@ body{
 label{
   font-size:14px;
   font-weight:600;
-  display:block;
-  margin-bottom:6px;
 }
-
 input{
   width:100%;
   padding:14px 18px;
   border-radius:30px;
   border:1px solid #ddd;
+  margin-top:6px;
   font-size:14px;
 }
 input:focus{
   outline:none;
   border-color:#0d47a1;
+}
+
+/* CONSENT */
+.consent{
+  margin-top:20px;
+  font-size:13px;
+  line-height:1.6;
 }
 
 /* BUTTON */
@@ -57,25 +72,34 @@ button{
   padding:16px;
   border:none;
   border-radius:30px;
-  background:#111;
+  background:#0d47a1;
   color:#fff;
   font-size:16px;
   font-weight:600;
   cursor:pointer;
 }
-button:hover{background:#000}
+button:hover{background:#0b3d91}
 
-/* CONSENT TEXT */
-.consent{
-  margin-top:18px;
+/* INFO */
+.info{
+  margin-top:15px;
   font-size:13px;
-  line-height:1.6;
-  color:#444;
+  color:#555;
+}
+
+/* FOOTER */
+footer{
+  background:#0d47a1;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  font-size:13px;
 }
 
 /* MOBILE */
 @media(max-width:700px){
   .grid{grid-template-columns:1fr}
+  .top h1{font-size:28px}
   .card{padding:28px}
 }
 </style>
@@ -83,43 +107,90 @@ button:hover{background:#000}
 
 <body>
 
+<!-- ✅ HEADER WITH FALLBACK -->
+<div id="header"></div>
+<script>
+fetch("header.html")
+.then(r => r.text())
+.then(d => document.getElementById("header").innerHTML = d)
+.catch(()=>{
+ document.getElementById("header").innerHTML =
+ "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+});
+</script>
+
+<!-- TOP -->
+<section class="top">
+  <h1>OPT‑IN</h1>
+  <p>Consent for WhatsApp, RCS, SMS & Email</p>
+</section>
+
+<!-- FORM -->
 <div class="card">
-<form>
+<form id="optinForm">
 
   <div class="grid">
 
     <div class="full">
       <label>Name</label>
-      <input type="text" placeholder="Name" required>
+      <input type="text" id="name" placeholder="Name" required>
     </div>
 
     <div>
       <label>Number</label>
-      <input type="tel" placeholder="Number" required>
+      <input type="tel" id="mobile" placeholder="Number" required>
     </div>
 
     <div>
       <label>Email</label>
-      <input type="email" placeholder="Email" required>
+      <input type="email" id="email" placeholder="Email" required>
     </div>
 
-    <div class="full">
-      <label>Website Opt‑in URL</label>
-      <input type="url" value="https://example.com/contact" readonly>
-    </div>
+  </div>
 
+  <div class="consent">
+    <label>
+      <input type="checkbox" checked required>
+      I allow <strong>Bhumi Marketing</strong> to send me messages via
+      <strong>RCS, SMS, WhatsApp and Email</strong>.
+    </label>
   </div>
 
   <button type="submit">SUBMIT</button>
 
-  <div class="consent">
-    URL where customers can clearly opt‑in to receive RCS messages.
-    Should include a checkbox like
-    <strong>“I allow [Brand Name] to send messages via RCS, SMS, WhatsApp and Email.”</strong>
+  <div class="info">
+    This page is used to collect customer opt‑in consent. Users voluntarily
+    provide their details and agree to receive communications from
+    <strong>Bhumi Marketing</strong> via WhatsApp, RCS, SMS and Email.
   </div>
 
 </form>
 </div>
+
+<footer>
+© 2025 Bhumi Marketing | All Rights Reserved
+</footer>
+
+<!-- WHATSAPP SUBMIT -->
+<script>
+document.getElementById("optinForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  var name   = document.getElementById("name").value;
+  var mobile = document.getElementById("mobile").value;
+  var email  = document.getElementById("email").value;
+
+  var msg =
+    "NEW OPT-IN RECEIVED\n\n"+
+    "Name: "+name+"\n"+
+    "Mobile: "+mobile+"\n"+
+    "Email: "+email+"\n\n"+
+    "Consent given for WhatsApp, RCS, SMS & Email.";
+
+  window.location.href =
+    "https://wa.me/919887700059?text="+encodeURIComponent(msg);
+});
+</script>
 
 </body>
 </html>
