@@ -5,7 +5,7 @@
 <title>OPT-IN | Bhumi Marketing</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Customer opt-in consent for WhatsApp, RCS, SMS & Email">
+<meta name="description" content="Opt-in consent for WhatsApp, RCS, SMS & Email communication">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -15,94 +15,96 @@ body{
   color:#333;
 }
 
-/* HEADER SECTION */
-.optin-header{
-  background:#1f2937;
+/* TOP BLUE SECTION */
+.optin-top{
+  background:#0d47a1;
   color:#fff;
-  padding:70px 20px;
+  padding:80px 20px;
   text-align:center;
 }
-.optin-header h1{
+.optin-top h1{
   font-size:42px;
+  margin-bottom:8px;
 }
-.optin-header p{
-  margin-top:10px;
-  font-size:16px;
+.optin-top p{
+  font-size:15px;
   opacity:.9;
 }
 
 /* FORM CARD */
-.optin-wrapper{
-  max-width:800px;
-  margin:-50px auto 80px;
+.optin-card{
+  max-width:780px;
+  margin:-60px auto 90px;
   background:#fff;
-  padding:40px;
-  border-radius:16px;
-  box-shadow:0 15px 40px rgba(0,0,0,.12);
+  padding:45px;
+  border-radius:18px;
+  box-shadow:0 18px 45px rgba(13,71,161,.25);
 }
 
 label{
   display:block;
-  font-weight:600;
-  margin-top:18px;
   font-size:14px;
+  font-weight:600;
+  margin-top:20px;
 }
 
 input{
   width:100%;
-  padding:14px;
+  padding:15px;
   margin-top:6px;
   border-radius:30px;
   border:1px solid #ddd;
   font-size:14px;
 }
-
 input:focus{
   outline:none;
-  border-color:#1f2937;
+  border-color:#0d47a1;
 }
 
-/* CHECKBOX */
+/* CONSENT */
 .consent{
   display:flex;
   gap:10px;
-  margin-top:22px;
+  margin-top:24px;
   font-size:13px;
-  line-height:1.5;
+  line-height:1.6;
 }
 .consent input{
   width:auto;
   margin-top:4px;
 }
 
-/* BUTTON */
+/* BLUE BUTTON */
 button{
-  margin-top:30px;
+  margin-top:32px;
   width:100%;
-  padding:15px;
+  padding:16px;
   border:none;
   border-radius:30px;
-  background:#111;
+  background:#0d47a1;
   color:#fff;
   font-size:16px;
   font-weight:600;
   cursor:pointer;
+  box-shadow:0 10px 25px rgba(13,71,161,.35);
 }
-button:hover{background:#000}
+button:hover{
+  background:#0b3d91;
+}
 
 /* FOOTER */
 footer{
-  background:#111;
+  background:#0d47a1;
   color:#fff;
   text-align:center;
-  padding:15px;
+  padding:16px;
   font-size:13px;
 }
 
 /* MOBILE */
 @media(max-width:600px){
-  .optin-header h1{font-size:30px}
-  .optin-wrapper{padding:25px}
+  .optin-top h1{font-size:30px}
+  .optin-card{padding:28px}
 }
 </style>
 </head>
@@ -117,14 +119,14 @@ fetch("header.html")
 .then(d => document.getElementById("header").innerHTML = d);
 </script>
 
-<!-- HEADER -->
-<section class="optin-header">
+<!-- TOP -->
+<section class="optin-top">
   <h1>OPT-IN</h1>
   <p>Configure opt-in consent for WhatsApp, RCS, SMS & Email</p>
 </section>
 
 <!-- FORM -->
-<section class="optin-wrapper">
+<section class="optin-card">
 <form id="optinForm">
 
   <label>Full Name</label>
@@ -135,9 +137,6 @@ fetch("header.html")
 
   <label>Email Address</label>
   <input type="email" id="email" required>
-
-  <label>Website Opt-in URL</label>
-  <input type="url" value="https://mahadevservices.site/contact" readonly>
 
   <div class="consent">
     <input type="checkbox" checked required>
@@ -165,7 +164,7 @@ document.getElementById("optinForm").addEventListener("submit", function(e){
   var mobile = document.getElementById("mobile").value.trim();
   var email  = document.getElementById("email").value.trim();
 
-  if(name === "" || mobile === "" || email === ""){
+  if(name==="" || mobile==="" || email===""){
     alert("Please fill all required fields");
     return;
   }
@@ -175,13 +174,13 @@ document.getElementById("optinForm").addEventListener("submit", function(e){
     "Name: " + name + "\n" +
     "Mobile: " + mobile + "\n" +
     "Email: " + email + "\n\n" +
-    "Consent provided for RCS, WhatsApp, SMS & Email.";
+    "User has provided consent for RCS, WhatsApp, SMS & Email.";
 
-  // WhatsApp open (policy safe – user initiated)
+  // WhatsApp open
   window.location.href =
     "https://wa.me/919887700059?text=" + encodeURIComponent(msg);
 
-  // Thank You redirect
+  // Thank you page
   setTimeout(function(){
     window.location.replace("thankyou.html");
   }, 1200);
