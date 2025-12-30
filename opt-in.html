@@ -12,7 +12,7 @@ body{
   background:#f4f6f9;
 }
 
-/* TOP */
+/* TOP SECTION */
 .top{
   background:#0d47a1;
   color:#fff;
@@ -20,18 +20,19 @@ body{
   text-align:center;
 }
 .top h1{font-size:40px}
+.top p{margin-top:6px;font-size:14px}
 
 /* CARD */
 .card{
-  max-width:800px;
+  max-width:850px;
   margin:-50px auto 80px;
   background:#fff;
   padding:40px;
   border-radius:16px;
-  box-shadow:0 15px 40px rgba(0,0,0,.2);
+  box-shadow:0 18px 45px rgba(13,71,161,.25);
 }
 
-/* FORM */
+/* FORM GRID */
 .grid{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -49,12 +50,18 @@ input{
   border-radius:30px;
   border:1px solid #ddd;
   margin-top:6px;
+  font-size:14px;
+}
+input:focus{
+  outline:none;
+  border-color:#0d47a1;
 }
 
-/* CHECKBOX */
+/* CONSENT */
 .consent{
   margin-top:20px;
   font-size:13px;
+  line-height:1.6;
 }
 
 /* BUTTON */
@@ -70,6 +77,14 @@ button{
   font-weight:600;
   cursor:pointer;
 }
+button:hover{background:#0b3d91}
+
+/* INFO TEXT */
+.info{
+  margin-top:15px;
+  font-size:13px;
+  color:#555;
+}
 
 /* FOOTER */
 footer{
@@ -84,17 +99,32 @@ footer{
 @media(max-width:700px){
   .grid{grid-template-columns:1fr}
   .top h1{font-size:28px}
+  .card{padding:28px}
 }
 </style>
 </head>
 
 <body>
 
-<div class="top">
+<!-- ✅ YOUR HEADER CODE (WITH FALLBACK) -->
+<div id="header"></div>
+<script>
+fetch("header.html")
+.then(r => r.text())
+.then(d => document.getElementById("header").innerHTML = d)
+.catch(()=>{
+ document.getElementById("header").innerHTML =
+ "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+});
+</script>
+
+<!-- TOP -->
+<section class="top">
   <h1>OPT‑IN</h1>
   <p>Consent for WhatsApp, RCS, SMS & Email</p>
-</div>
+</section>
 
+<!-- FORM -->
 <div class="card">
 <form id="optinForm">
 
@@ -118,12 +148,20 @@ footer{
   </div>
 
   <div class="consent">
-    <input type="checkbox" checked required>
-    I allow <strong>Bhumi Marketing</strong> to send me messages via
-    <strong>RCS, SMS, WhatsApp and Email</strong>.
+    <label>
+      <input type="checkbox" checked required>
+      I allow <strong>Bhumi Marketing</strong> to send me messages via
+      <strong>RCS, SMS, WhatsApp and Email</strong>.
+    </label>
   </div>
 
   <button type="submit">SUBMIT</button>
+
+  <div class="info">
+    This page is used to collect customer opt‑in consent. Users voluntarily
+    provide their details and agree to receive communications from
+    <strong>Bhumi Marketing</strong> via WhatsApp, RCS, SMS and Email.
+  </div>
 
 </form>
 </div>
@@ -132,19 +170,21 @@ footer{
 © 2025 Bhumi Marketing | All Rights Reserved
 </footer>
 
+<!-- WHATSAPP SCRIPT -->
 <script>
 document.getElementById("optinForm").addEventListener("submit", function(e){
   e.preventDefault();
 
-  var name=document.getElementById("name").value;
-  var mobile=document.getElementById("mobile").value;
-  var email=document.getElementById("email").value;
+  var name   = document.getElementById("name").value;
+  var mobile = document.getElementById("mobile").value;
+  var email  = document.getElementById("email").value;
 
   var msg =
-    "NEW OPT-IN\n\n"+
+    "NEW OPT-IN RECEIVED\n\n"+
     "Name: "+name+"\n"+
     "Mobile: "+mobile+"\n"+
-    "Email: "+email;
+    "Email: "+email+"\n\n"+
+    "Consent given for WhatsApp, RCS, SMS & Email.";
 
   window.location.href =
     "https://wa.me/919887700059?text="+encodeURIComponent(msg);
