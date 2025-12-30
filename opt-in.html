@@ -2,113 +2,137 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>OPT‑IN | Bhumi Marketing</title>
+<title>OPT-IN | Bhumi Marketing</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
 body{
-  font-family:Arial, Helvetica, sans-serif;
-  background:#f4f6f9;
-  color:#333;
+    background:#f4f8ff;
+    color:#333;
 }
 
-/* TOP */
-.top{
-  background:#0d47a1;
-  color:#fff;
-  padding:70px 20px;
-  text-align:center;
+/* FORM CARD */
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:#fff;
+    padding:40px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(13,71,161,0.2);
 }
-.top h1{font-size:40px}
-.top p{margin-top:6px;font-size:14px}
-
-/* CARD */
-.card{
-  max-width:900px;
-  margin:-50px auto 80px;
-  background:#fff;
-  padding:40px;
-  border-radius:18px;
-  box-shadow:0 18px 45px rgba(13,71,161,.25);
+h2{
+    text-align:center;
+    color:#0d47a1;
+    margin-bottom:25px;
 }
-
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:22px;
+.form-group{
+    margin-bottom:20px;
 }
-.full{grid-column:1/-1}
-
 label{
-  font-size:14px;
-  font-weight:600;
+    display:block;
+    font-weight:600;
+    margin-bottom:6px;
+    color:#0d47a1;
 }
 input{
-  width:100%;
-  padding:14px 18px;
-  border-radius:30px;
-  border:1px solid #ddd;
-  margin-top:6px;
-  font-size:14px;
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #cfd8dc;
+    border-radius:30px;
+    font-size:15px;
+    outline:none;
 }
 input:focus{
-  outline:none;
-  border-color:#0d47a1;
+    border-color:#1976d2;
 }
 
-/* CONSENT */
-.consent{
-  margin-top:20px;
-  font-size:13px;
-  line-height:1.6;
+/* TWO COLUMN */
+.row{
+    display:flex;
+    gap:20px;
+}
+.row .form-group{
+    flex:1;
+}
+
+/* CHECKBOX */
+.checkbox{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+.checkbox input{
+    width:auto;
+    margin-top:4px;
+}
+.checkbox label{
+    font-size:14px;
+    line-height:1.5;
 }
 
 /* BUTTON */
 button{
-  width:100%;
-  margin-top:25px;
-  padding:16px;
-  border:none;
-  border-radius:30px;
-  background:#0d47a1;
-  color:#fff;
-  font-size:16px;
-  font-weight:600;
-  cursor:pointer;
+    width:100%;
+    margin-top:25px;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(to right,#0d47a1,#1976d2);
+    color:#fff;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
 }
-button:hover{background:#0b3d91}
-
-/* INFO TEXT (REAL OPT‑IN) */
-.info{
-  margin-top:15px;
-  font-size:13px;
-  color:#555;
-  line-height:1.6;
+button:hover{
+    opacity:0.9;
 }
 
-/* FOOTER */
-footer{
-  background:#0d47a1;
-  color:#fff;
-  text-align:center;
-  padding:15px;
-  font-size:13px;
+/* NOTE */
+.note{
+    margin-top:15px;
+    font-size:13px;
+    color:#555;
 }
 
-/* MOBILE */
-@media(max-width:700px){
-  .grid{grid-template-columns:1fr}
-  .top h1{font-size:28px}
-  .card{padding:28px}
+/* WHATSAPP CHATBOT */
+.whatsapp-chat{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:#fff;
+    padding:14px 18px;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:bold;
+    text-decoration:none;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    z-index:999;
+}
+.whatsapp-chat img{
+    width:28px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .row{
+        flex-direction:column;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER WITH FALLBACK -->
+<!-- DYNAMIC HEADER -->
 <div id="header"></div>
 <script>
 fetch("header.html")
@@ -116,84 +140,62 @@ fetch("header.html")
 .then(d => document.getElementById("header").innerHTML = d)
 .catch(()=>{
  document.getElementById("header").innerHTML =
- "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
+ "<div style='background:#0d47a1;color:#fff;padding:16px;text-align:center;font-weight:bold;font-size:18px'>Bhumi Marketing</div>";
 });
 </script>
 
-<!-- TOP -->
-<section class="top">
-  <h1>OPT‑IN</h1>
-  <p>Consent for WhatsApp, RCS, SMS & Email</p>
-</section>
-
 <!-- FORM -->
-<div class="card">
-<form id="optinForm">
+<div class="container">
+<form action="#" method="post">
 
-  <div class="grid">
-    <div class="full">
-      <label>Name</label>
-      <input type="text" id="name" placeholder="Name" required>
+    <h2>OPT-IN</h2>
+
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your Name" required>
     </div>
 
-    <div>
-      <label>Number</label>
-      <input type="tel" id="mobile" placeholder="Number" required>
+    <div class="row">
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="tel" name="mobile" placeholder="Enter Mobile Number" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter Email" required>
+        </div>
     </div>
 
-    <div>
-      <label>Email</label>
-      <input type="email" id="email" placeholder="Email" required>
+    <div class="form-group">
+        <label>Website Opt-in URL</label>
+        <input type="url" name="optin_url" placeholder="https://example.com/contact" required>
     </div>
-  </div>
 
-  <!-- CHECKBOX CONSENT -->
-  <div class="consent">
-    <label>
-      <input type="checkbox" checked required>
-      I allow <strong>Bhumi Marketing</strong> to send me messages via
-      <strong>WhatsApp, RCS, SMS and Email</strong>.
-    </label>
-  </div>
+    <div class="checkbox">
+        <input type="checkbox" required>
+        <label>
+            I allow <strong>Bhumi Marketing</strong> to send me messages via
+            <strong>RCS, WhatsApp, SMS and Email</strong>.
+        </label>
+    </div>
 
-  <button type="submit">SUBMIT</button>
+    <button type="submit">SUBMIT</button>
 
-  <!-- REAL WEBSITE OPT‑IN TEXT -->
-  <div class="info">
-    This page is used to collect customer opt‑in consent.
-    Users voluntarily provide their details and explicitly agree
-    to receive communications from
-    <strong>Bhumi Marketing</strong> via
-    <strong>WhatsApp, RCS, SMS and Email</strong>.
-  </div>
+    <div class="note">
+        This consent is mandatory as per TRAI & Google RCS policies.
+    </div>
 
 </form>
 </div>
 
-<footer>
-© 2025 Bhumi Marketing | All Rights Reserved
-</footer>
-
-<!-- WHATSAPP SUBMIT -->
-<script>
-document.getElementById("optinForm").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  var name   = document.getElementById("name").value;
-  var mobile = document.getElementById("mobile").value;
-  var email  = document.getElementById("email").value;
-
-  var msg =
-    "NEW OPT-IN RECEIVED\n\n"+
-    "Name: "+name+"\n"+
-    "Mobile: "+mobile+"\n"+
-    "Email: "+email+"\n\n"+
-    "Consent given for WhatsApp, RCS, SMS & Email.";
-
-  window.location.href =
-    "https://wa.me/919887700059?text="+encodeURIComponent(msg);
-});
-</script>
+<!-- WHATSAPP CHATBOT -->
+<a class="whatsapp-chat"
+   href="https://wa.me/919887700059?text=Hello%20Bhumi%20Marketing,%20I%20want%20to%20know%20more"
+   target="_blank">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+   Chat with us
+</a>
 
 </body>
 </html>
