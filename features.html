@@ -109,24 +109,6 @@ footer{
     font-size:14px;
 }
 
-/* WHATSAPP */
-.chat-float{
-    position:fixed;
-    bottom:25px;
-    right:25px;
-    width:60px;
-    height:60px;
-    background:#25D366;
-    color:#fff;
-    border-radius:50%;
-    text-align:center;
-    font-size:28px;
-    line-height:60px;
-    text-decoration:none;
-    box-shadow:0 8px 20px rgba(0,0,0,0.25);
-    z-index:9999;
-}
-
 @media(max-width:600px){
     .page-title h1{font-size:28px}
 }
@@ -259,7 +241,13 @@ fetch("header.html")
 © 2025 Bhumi Marketing | All Rights Reserved
 </footer>
 
-<a href="https://wa.me/919887700059" class="chat-float" target="_blank">💬</a>
+<!-- COMMON WHATSAPP CHATBOT LOAD -->
+<div id="chatbot"></div>
+<script>
+fetch("chatbot.html")
+.then(r => r.text())
+.then(d => document.getElementById("chatbot").innerHTML = d);
+</script>
 
 </body>
 </html>
