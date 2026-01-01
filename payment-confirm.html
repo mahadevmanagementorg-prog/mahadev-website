@@ -8,46 +8,84 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{background:#f4f7fb;color:#333}
-.container{max-width:700px;margin:40px auto;background:#fff;padding:25px;border-radius:14px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1)}
-h1{text-align:center;color:#0d47a1;margin-bottom:20px}
-label{font-weight:bold;margin-top:12px;display:block}
-input,select{
-width:100%;padding:10px;margin-top:6px;
-border:1px solid #ccc;border-radius:6px
+
+.container{
+max-width:720px;
+margin:40px auto;
+background:#fff;
+padding:25px;
+border-radius:14px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1)
 }
+
+h1{text-align:center;color:#0d47a1;margin-bottom:20px}
+
+.bank{
+background:#f9fbff;
+border:1px solid #ddd;
+border-radius:10px;
+padding:15px;
+margin-bottom:20px
+}
+.bank p{margin:6px 0;font-size:14px}
+
+label{display:block;margin-top:12px;font-weight:bold}
+
+input,select{
+width:100%;
+padding:10px;
+margin-top:6px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px
+}
+
 button{
-margin-top:20px;width:100%;
-background:#0d47a1;color:#fff;
-padding:12px;border:none;
-border-radius:8px;font-size:16px;font-weight:bold
+margin-top:22px;
+width:100%;
+background:#0d47a1;
+color:#fff;
+padding:14px;
+border:none;
+border-radius:8px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer
 }
 button:hover{background:#08306b}
-.bank{
-background:#f9fbff;padding:15px;border-radius:10px;
-border:1px solid #ddd;margin-bottom:20px
+
+.note{
+font-size:13px;
+color:#d32f2f;
+margin-top:10px;
+text-align:center
 }
 </style>
 
 <script>
 function sendWhatsApp(){
-    var service = document.getElementById("service").value;
-    var name = document.getElementById("name").value;
-    var mobile = document.getElementById("mobile").value;
-    var amount = document.getElementById("amount").value;
-    var txn = document.getElementById("txn").value;
+var service = document.getElementById("service").value;
+var name = document.getElementById("name").value;
+var mobile = document.getElementById("mobile").value;
+var amount = document.getElementById("amount").value;
+var txn = document.getElementById("txn").value;
 
-    var msg = 
-    "📌 *New Service Payment*\n\n"+
-    "Service: "+service+"\n"+
-    "Name: "+name+"\n"+
-    "Mobile: "+mobile+"\n"+
-    "Amount: ₹"+amount+"\n"+
-    "Transaction ID: "+txn+"\n\n"+
-    "Please verify payment.";
+if(name=="" || mobile=="" || amount=="" || txn==""){
+alert("Please fill all details");
+return;
+}
 
-    var url = "https://wa.me/919887700059?text="+encodeURIComponent(msg);
-    window.open(url,"_blank");
+var message =
+"✅ *New Service Payment*\n\n"+
+"🔹 Service: "+service+"\n"+
+"👤 Name: "+name+"\n"+
+"📱 Mobile: "+mobile+"\n"+
+"💰 Amount: ₹"+amount+"\n"+
+"🧾 Transaction ID: "+txn+"\n\n"+
+"Please verify & activate service.";
+
+var url = "https://wa.me/919887700059?text=" + encodeURIComponent(message);
+window.open(url,"_blank");
 }
 </script>
 </head>
@@ -59,12 +97,15 @@ function sendWhatsApp(){
 <h1>Payment Confirmation</h1>
 
 <div class="bank">
-<p><strong>Account Name:</strong> Bhumi Marketing</p>
-<p><strong>Bank Name:</strong> YOUR BANK NAME</p>
-<p><strong>Account Number:</strong> XXXXXXXXXX</p>
-<p><strong>IFSC Code:</strong> XXXX0XXXXX</p>
-<p><strong>UPI ID:</strong> yourupi@bank</p>
-<img src="qr.png" style="max-width:180px;margin-top:10px;border-radius:8px">
+<p><strong>Account Holder:</strong> MAHADEV PANWAR</p>
+<p><strong>Bank Name:</strong> Bank of Baroda</p>
+<p><strong>Branch:</strong> Balotra</p>
+<p><strong>IFSC Code:</strong> BARB0BALOTR</p>
+<p><strong>Account Number:</strong> 37270100013524</p>
+<p><strong>UPI ID:</strong> 9887700059@ibl</p>
+
+<img src="qr.png" alt="PhonePe QR Code"
+style="max-width:200px;margin-top:10px;border:1px solid #ccc;border-radius:8px">
 </div>
 
 <label>Select Service</label>
@@ -72,24 +113,28 @@ function sendWhatsApp(){
 <option>Digital Marketing</option>
 <option>CRM Solutions</option>
 <option>WhatsApp API</option>
-<option>Automation & Chatbot</option>
+<option>Automation & Chatbots</option>
 <option>RCS Marketing</option>
-<option>IVR Service</option>
+<option>IVR Services</option>
 </select>
 
 <label>Your Name</label>
-<input type="text" id="name" required>
+<input type="text" id="name" placeholder="Enter your name">
 
 <label>Mobile Number</label>
-<input type="tel" id="mobile" required>
+<input type="tel" id="mobile" placeholder="Enter mobile number">
 
-<label>Paid Amount</label>
-<input type="number" id="amount" required>
+<label>Paid Amount (₹)</label>
+<input type="number" id="amount" placeholder="Enter amount">
 
 <label>Transaction / UTR ID</label>
-<input type="text" id="txn" required>
+<input type="text" id="txn" placeholder="Enter UTR / Transaction ID">
 
 <button onclick="sendWhatsApp()">Submit & Send on WhatsApp</button>
+
+<div class="note">
+Payment submit karne ke baad WhatsApp par <b>Send</b> button dabaye.
+</div>
 
 </div>
 
