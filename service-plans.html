@@ -8,7 +8,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{background:#f4f7fb;color:#333}
-
 .container{max-width:1100px;margin:40px auto;padding:20px}
 
 h1{text-align:center;color:#0d47a1;margin-bottom:10px}
@@ -61,35 +60,28 @@ border-radius:10px;
 box-shadow:0 8px 20px rgba(0,0,0,0.07)
 }
 
-.footer{
-text-align:center;
-margin-top:40px;
-font-size:14px;
-color:#555
-}
+.footer{text-align:center;margin-top:40px;font-size:14px;color:#555}
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
 <h1>Bhumi Marketing – Service & Panel Page</h1>
 <div class="subtitle">Official | Server Based | Transparent Pricing</div>
 
-<!-- INDIVIDUAL SERVICES -->
+<!-- SERVICES -->
 <div class="grid">
-
 <div class="card">
 <h2>Digital Marketing</h2>
 <div class="price">₹7,000 / Month</div>
-<a href="payment-confirm.html" class="btn">Buy Now</a>
+<a href="payment-confirm.html?service=Digital Marketing" class="btn">Buy Now</a>
 </div>
 
 <div class="card">
 <h2>CRM Solutions</h2>
 <div class="price">₹10,000 / Year</div>
-<a href="payment-confirm.html" class="btn">Buy Now</a>
+<a href="payment-confirm.html?service=CRM Solutions" class="btn">Buy Now</a>
 </div>
 
 <div class="card">
@@ -98,71 +90,31 @@ color:#555
 <ul>
 <li>Your Own WhatsApp Number</li>
 <li>Meta Official Approval</li>
-<li>Message charges Meta policy ke according</li>
 </ul>
-<a href="payment-confirm.html" class="btn">Buy Now</a>
+<a href="payment-confirm.html?service=WhatsApp API" class="btn">Buy Now</a>
 </div>
 
 <div class="card">
 <h2>Automation & Chatbots</h2>
 <div class="price">₹5,000 (One-Time)</div>
-<a href="payment-confirm.html" class="btn">Buy Now</a>
+<a href="payment-confirm.html?service=Automation & Chatbots" class="btn">Buy Now</a>
 </div>
 
 <div class="card">
 <h2>RCS Marketing</h2>
 <div class="price">₹10,000 (One-Time)</div>
 <ul>
-<li>RCS Panel (Your Panel)</li>
-<li>RCS Credit: ₹0.25 / Message</li>
+<li>RCS Panel</li>
+<li>₹0.25 / Message</li>
 </ul>
-<a href="payment-confirm.html" class="btn">Buy Now</a>
+<a href="payment-confirm.html?service=RCS Marketing" class="btn">Buy Now</a>
+</div>
 </div>
 
-</div>
-
-<!-- IVR SERVICES -->
-<h1 style="margin-top:50px">IVR Services</h1>
-
-<div class="grid">
-
-<div class="card">
-<h2>IVR Missed Call Service</h2>
-<div class="price">₹14,000 / 6 Months</div>
-<ul>
-<li>1 Organisation</li>
-<li>Dedicated IVR / Missed Call Number</li>
-<li>Auto Call Response</li>
-<li>Basic IVR Flow</li>
-<li>Admin Access</li>
-</ul>
-<a href="payment-confirm.html" class="btn">Buy IVR</a>
-</div>
-
-<div class="card">
-<h2>Call Recording (Add-On)</h2>
-<div class="price">₹2,000 / 6 Months</div>
-<a href="payment-confirm.html" class="btn">Add Recording</a>
-</div>
-
-<div class="card premium">
-<h2>IVR Total Package</h2>
-<div class="price">₹16,000 / 6 Months</div>
-<ul>
-<li>IVR Service + Call Recording</li>
-<li>Complete Admin Control</li>
-</ul>
-<a href="payment-confirm.html" class="btn">Buy Complete IVR</a>
-</div>
-
-</div>
-
-<!-- COMBO PLANS -->
+<!-- COMBO -->
 <h1 style="margin-top:50px">Combo Plans</h1>
-<div class="subtitle">Best Value Packages | Setup FREE</div>
 
 <div class="grid">
-
 <div class="card starter">
 <h2>Starter Combo</h2>
 <div class="price">₹19,999</div>
@@ -170,10 +122,9 @@ color:#555
 <li>WhatsApp API</li>
 <li>CRM (1 Year)</li>
 <li>Automation & Chatbot</li>
-<li>Setup FREE</li>
-<li>24×7 Support</li>
+<li>Setup FREE | 24×7 Support</li>
 </ul>
-<a href="payment-confirm.html" class="btn">Buy Starter</a>
+<a href="payment-confirm.html?service=Starter Combo" class="btn">Buy Starter</a>
 </div>
 
 <div class="card growth">
@@ -185,9 +136,8 @@ color:#555
 <li>Automation & Chatbot</li>
 <li>RCS Panel</li>
 <li>IVR (6 Months)</li>
-<li>Setup FREE | 24×7 Support</li>
 </ul>
-<a href="payment-confirm.html" class="btn">Buy Growth</a>
+<a href="payment-confirm.html?service=Growth Combo" class="btn">Buy Growth</a>
 </div>
 
 <div class="card premium">
@@ -195,30 +145,20 @@ color:#555
 <div class="price">₹39,999</div>
 <ul>
 <li>WhatsApp API</li>
-<li>Advanced CRM (1 Year)</li>
+<li>Advanced CRM</li>
 <li>Automation & Chatbot</li>
 <li>RCS Panel</li>
-<li>IVR (6 Months)</li>
-<li>Call Recording FREE</li>
-<li>Setup FREE | 24×7 Support</li>
+<li>IVR + Call Recording</li>
 </ul>
-<a href="payment-confirm.html" class="btn">Buy Premium</a>
+<a href="payment-confirm.html?service=Premium Combo" class="btn">Buy Premium</a>
+</div>
 </div>
 
-</div>
-
-<!-- NOTE -->
 <div class="note">
-<p><strong>Note:</strong><br>
-Message & call charges platform policy ke according apply honge.
-</p>
+<p><strong>Note:</strong> Message & call charges platform policy ke according apply honge.</p>
 </div>
 
-<div class="footer">
-© 2026 Bhumi Marketing. All Rights Reserved.
+<div class="footer">© 2026 Bhumi Marketing. All Rights Reserved.</div>
 </div>
-
-</div>
-
 </body>
 </html>
