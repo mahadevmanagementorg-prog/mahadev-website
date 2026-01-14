@@ -81,6 +81,34 @@
             padding:15px;
             font-size:13px;
         }
+
+        /* WHATSAPP CHATBOT */
+        .whatsapp-chatbot{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            z-index:9999;
+        }
+        .whatsapp-chatbot a{
+            display:flex;
+            align-items:center;
+            background:#25D366;
+            color:#fff;
+            padding:12px 18px;
+            border-radius:50px;
+            text-decoration:none;
+            font-size:15px;
+            font-weight:bold;
+            box-shadow:0 8px 20px rgba(0,0,0,0.25);
+        }
+        .whatsapp-chatbot img{
+            width:28px;
+            height:28px;
+            margin-right:10px;
+        }
+        .whatsapp-chatbot a:hover{
+            background:#1ebe5d;
+        }
     </style>
 </head>
 <body>
@@ -108,59 +136,38 @@ fetch("header.html")
     <div class="services">
         <div class="service-box">
             <h3>Digital Marketing</h3>
-            <p>
-                Google Ads, Facebook Ads, Instagram Ads aur complete online promotion
-                jisse aapka business zyada customers tak pahunch sake.
-            </p>
+            <p>Google Ads, Facebook Ads, Instagram Ads aur complete online promotion.</p>
         </div>
 
         <div class="service-box">
             <h3>Social Media Management</h3>
-            <p>
-                Professional posts, reels, creatives aur regular content management
-                taaki aapka brand social media par strong dikhe.
-            </p>
+            <p>Professional posts, reels, creatives aur regular content management.</p>
         </div>
 
         <div class="service-box">
             <h3>Website Development</h3>
-            <p>
-                Responsive aur fast websites – business website, landing page
-                ya ecommerce site as per your requirement.
-            </p>
+            <p>Responsive aur fast websites – business, landing page ya ecommerce.</p>
         </div>
 
         <div class="service-box">
             <h3>SEO Services</h3>
-            <p>
-                Google search me aapki website ko top par laane ke liye
-                on-page aur off-page SEO solutions.
-            </p>
+            <p>Google search me website ko top par lane ke liye SEO solutions.</p>
         </div>
 
         <div class="service-box">
             <h3>Graphic Designing</h3>
-            <p>
-                Logo design, banners, posters, social media creatives
-                jo aapke brand ko professional look dete hain.
-            </p>
+            <p>Logo design, banners, posters aur social media creatives.</p>
         </div>
 
         <div class="service-box">
             <h3>Offline Marketing</h3>
-            <p>
-                Pamphlet distribution, banner printing, hoardings aur
-                local marketing solutions.
-            </p>
+            <p>Pamphlet distribution, banner printing aur local marketing.</p>
         </div>
     </div>
 
-    <!-- Call to Action -->
     <div class="cta">
         <h2>Grow Your Business With Bhumi Marketing</h2>
-        <p>
-            Aaj hi humse contact karein aur apne business ke liye best marketing strategy paayein.
-        </p>
+        <p>Aaj hi humse contact karein aur best marketing strategy paayein.</p>
         <a href="contact.html">Contact Us</a>
     </div>
 </div>
@@ -168,6 +175,15 @@ fetch("header.html")
 <footer>
     © 2026 Bhumi Marketing. All Rights Reserved.
 </footer>
+
+<!-- WHATSAPP CHATBOT -->
+<div class="whatsapp-chatbot">
+    <a href="https://wa.me/919887700059?text=Hello%20Bhumi%20Marketing,%20I%20want%20to%20know%20about%20your%20services"
+       target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        Chat on WhatsApp
+    </a>
+</div>
 
 </body>
 </html>
