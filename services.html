@@ -1,72 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Privacy Policy | Bhumi Marketing</title>
-
-<link rel="icon" type="image/png" href="favicon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Privacy Policy of Bhumi Marketing covering data collection, usage, security, cookies and user rights.">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f5f7fb;
-    color:#333;
-}
-
-/* PAGE TITLE */
-.page-title{
-    padding:70px 20px 30px;
-    text-align:center;
-}
-.page-title h1{
-    font-size:38px;
-    color:#0d47a1;
-}
-
-/* CONTENT */
-.policy-box{
-    max-width:1000px;
-    margin:0 auto 80px;
-    background:#fff;
-    padding:45px;
-    border-radius:16px;
-    box-shadow:0 15px 35px rgba(0,0,0,0.1);
-}
-.policy-box h2{
-    color:#0d47a1;
-    margin-top:32px;
-    margin-bottom:10px;
-    font-size:22px;
-}
-.policy-box p{
-    font-size:15px;
-    line-height:1.8;
-    margin-top:8px;
-}
-
-/* FOOTER */
-footer{
-    background:#222;
-    color:#fff;
-    text-align:center;
-    padding:16px;
-    font-size:14px;
-}
-
-@media(max-width:600px){
-    .page-title h1{font-size:28px}
-    .policy-box{padding:30px}
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Bhumi Marketing | Our Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:#f5f7fa;
+            color:#333;
+        }
+        .container{
+            max-width:1100px;
+            margin:auto;
+            padding:40px 20px;
+        }
+        h1{
+            text-align:center;
+            color:#0d47a1;
+            margin-bottom:10px;
+        }
+        .subtitle{
+            text-align:center;
+            color:#555;
+            margin-bottom:40px;
+        }
+        .services{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap:20px;
+        }
+        .service-box{
+            background:#fff;
+            padding:25px;
+            border-radius:8px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.08);
+            transition:transform 0.3s, box-shadow 0.3s;
+        }
+        .service-box:hover{
+            transform:translateY(-5px);
+            box-shadow:0 8px 20px rgba(0,0,0,0.12);
+        }
+        .service-box h3{
+            color:#0d47a1;
+            margin-bottom:10px;
+        }
+        .service-box p{
+            font-size:14px;
+            line-height:1.6;
+        }
+        .cta{
+            margin-top:50px;
+            background:#0d47a1;
+            color:#fff;
+            padding:30px;
+            text-align:center;
+            border-radius:8px;
+        }
+        .cta h2{
+            margin:0 0 10px;
+        }
+        .cta p{
+            margin-bottom:20px;
+        }
+        .cta a{
+            display:inline-block;
+            background:#ffca28;
+            color:#000;
+            padding:12px 25px;
+            text-decoration:none;
+            font-weight:bold;
+            border-radius:5px;
+        }
+        footer{
+            margin-top:40px;
+            background:#111;
+            color:#ccc;
+            text-align:center;
+            padding:15px;
+            font-size:13px;
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- COMMON HEADER -->
+<!-- Header Load -->
 <div id="header"></div>
+
 <script>
 fetch("header.html")
 .then(r => r.text())
@@ -77,89 +98,76 @@ fetch("header.html")
 });
 </script>
 
-<!-- PAGE TITLE -->
-<section class="page-title">
-<h1>Privacy Policy</h1>
-</section>
+<!-- Services Section -->
+<div class="container">
+    <h1>Our Services</h1>
+    <p class="subtitle">
+        Bhumi Marketing aapke business ko online aur offline dono jagah grow karne ke liye complete marketing solutions deta hai.
+    </p>
 
-<!-- POLICY CONTENT -->
-<section class="policy-box">
+    <div class="services">
+        <div class="service-box">
+            <h3>Digital Marketing</h3>
+            <p>
+                Google Ads, Facebook Ads, Instagram Ads aur complete online promotion
+                jisse aapka business zyada customers tak pahunch sake.
+            </p>
+        </div>
 
-<p>
-Bhumi Marketing respects your privacy and is committed to protecting the
-personal information you share with us. This Privacy Policy explains how
-we collect, use, store, and safeguard your information.
-</p>
+        <div class="service-box">
+            <h3>Social Media Management</h3>
+            <p>
+                Professional posts, reels, creatives aur regular content management
+                taaki aapka brand social media par strong dikhe.
+            </p>
+        </div>
 
-<h2>Information We Collect</h2>
-<p>
-We may collect personal information including your name, email address,
-mobile number, company details, and any information submitted through our
-website forms, WhatsApp, email, or other communication channels.
-</p>
+        <div class="service-box">
+            <h3>Website Development</h3>
+            <p>
+                Responsive aur fast websites – business website, landing page
+                ya ecommerce site as per your requirement.
+            </p>
+        </div>
 
-<h2>How We Use Your Information</h2>
-<p>
-• To provide digital marketing, CRM, WhatsApp API, IVR, RCS, and automation services.<br>
-• To respond to inquiries, service requests, and customer support needs.<br>
-• To send service-related updates, alerts, and promotional communication (with consent).
-</p>
+        <div class="service-box">
+            <h3>SEO Services</h3>
+            <p>
+                Google search me aapki website ko top par laane ke liye
+                on-page aur off-page SEO solutions.
+            </p>
+        </div>
 
-<h2>Data Protection & Security</h2>
-<p>
-We use appropriate technical and organizational security measures to
-protect your personal data. We do not sell, rent, or trade your personal
-information to third parties, except where required by law.
-</p>
+        <div class="service-box">
+            <h3>Graphic Designing</h3>
+            <p>
+                Logo design, banners, posters, social media creatives
+                jo aapke brand ko professional look dete hain.
+            </p>
+        </div>
 
-<h2>Cookies & Tracking</h2>
-<p>
-Our website may use cookies and similar technologies to improve user
-experience, analyze traffic, and enhance our services. You may disable
-cookies through your browser settings if you prefer.
-</p>
+        <div class="service-box">
+            <h3>Offline Marketing</h3>
+            <p>
+                Pamphlet distribution, banner printing, hoardings aur
+                local marketing solutions.
+            </p>
+        </div>
+    </div>
 
-<h2>Third-Party Services</h2>
-<p>
-We may use third-party tools such as analytics, payment gateways, or
-messaging platforms to support our operations. These third parties have
-their own privacy policies governing the use of your data.
-</p>
-
-<h2>User Consent</h2>
-<p>
-By accessing or using our website and services, you consent to the
-collection and use of your information as described in this Privacy Policy.
-</p>
-
-<h2>Policy Updates</h2>
-<p>
-Bhumi Marketing reserves the right to update this Privacy Policy at any
-time. Any changes will be posted on this page with an updated effective date.
-</p>
-
-<h2>Contact Information</h2>
-<p>
-If you have any questions or concerns regarding this Privacy Policy, you
-may contact us at:
-<br><br>
-<strong>Email:</strong> bhumimarketing.info.gov@gmail.com<br>
-<strong>Mobile:</strong> +91 98877 00059
-</p>
-
-</section>
+    <!-- Call to Action -->
+    <div class="cta">
+        <h2>Grow Your Business With Bhumi Marketing</h2>
+        <p>
+            Aaj hi humse contact karein aur apne business ke liye best marketing strategy paayein.
+        </p>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</div>
 
 <footer>
-© 2025 Bhumi Marketing | All Rights Reserved
+    © 2026 Bhumi Marketing. All Rights Reserved.
 </footer>
-
-<!-- COMMON WHATSAPP CHATBOT -->
-<div id="chatbot"></div>
-<script>
-fetch("chatbot.html")
-.then(r => r.text())
-.then(d => document.getElementById("chatbot").innerHTML = d);
-</script>
 
 </body>
 </html>
