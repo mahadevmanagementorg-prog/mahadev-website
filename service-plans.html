@@ -61,30 +61,42 @@ border-radius:10px
 }
 
 .footer{text-align:center;margin-top:40px;font-size:14px;color:#555}
+
+/* WHATSAPP CHATBOT */
+.whatsapp-chatbot{
+position:fixed;
+bottom:20px;
+right:20px;
+z-index:9999
+}
+.whatsapp-chatbot a{
+display:flex;
+align-items:center;
+background:#25D366;
+color:#fff;
+padding:12px 18px;
+border-radius:50px;
+text-decoration:none;
+font-size:15px;
+font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,0.25)
+}
+.whatsapp-chatbot img{
+width:28px;
+height:28px;
+margin-right:10px
+}
+.whatsapp-chatbot a:hover{background:#1ebe5d}
 </style>
 </head>
 
 <body>
-
-<!-- 🔹 HEADER LOAD -->
-<div id="header"></div>
-
-<script>
-fetch("header.html")
-.then(r => r.text())
-.then(d => document.getElementById("header").innerHTML = d)
-.catch(()=>{
- document.getElementById("header").innerHTML =
- "<div style='background:#0d47a1;color:#fff;padding:15px;text-align:center;font-weight:bold'>Bhumi Marketing</div>";
-});
-</script>
 
 <div class="container">
 
 <h1>Bhumi Marketing – Service & Panel Page</h1>
 <div class="subtitle">Official | Server Based | Transparent Pricing</div>
 
-<!-- SERVICES -->
 <div class="grid">
 
 <div class="card">
@@ -139,7 +151,6 @@ fetch("header.html")
 
 </div>
 
-<!-- COMBO PLANS -->
 <h1 style="margin-top:50px">Combo Plans</h1>
 
 <div class="grid">
@@ -193,5 +204,15 @@ fetch("header.html")
 </div>
 
 </div>
+
+<!-- WHATSAPP CHATBOT -->
+<div class="whatsapp-chatbot">
+<a href="https://wa.me/919887700059?text=Hello%20Bhumi%20Marketing,%20I%20want%20details%20about%20your%20services"
+target="_blank">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+Chat on WhatsApp
+</a>
+</div>
+
 </body>
 </html>
